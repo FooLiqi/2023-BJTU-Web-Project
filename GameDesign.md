@@ -1,4 +1,4 @@
-# Game Design
+# Scarlet Mana - Game Design
 
 ## 1. 基本信息
 
