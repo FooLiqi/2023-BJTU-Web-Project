@@ -1,4 +1,3 @@
-from django.db.models import F
 from django.http import HttpResponse
 
 from .models import User
@@ -19,14 +18,14 @@ def resource(request):
     if request.method != 'POST':
         result['state'] = 'error'
         result['error_message'] = 'Request method is not POST.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
 
     data = json.loads(request.body)
 
     if 'token' not in data or data['token'] is None:
         result['state'] = 'error'
         result['error_message'] = 'Token is none.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
 
     [username, password] = Tools.decode(data['token'])
 
@@ -37,14 +36,14 @@ def resource(request):
     if users.count() == 0:
         result['state'] = 'error'
         result['error_message'] = 'Token is incorrect and username doesn\'t exist.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
     
     user = users.first()
 
     if user.password != password:
         result['state'] = 'error'
         result['error_message'] = 'Password is incorrect.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
 
     result['state'] = 'success'
     result['mana'] = user.mana
@@ -52,7 +51,7 @@ def resource(request):
     result['mineral'] = user.mineral
     result['dwarf'] = user.dwarf
 
-    return Tools.toResponse(result)
+    return Tools.toResponse(result, 200)
 
 
 def sign(request, auto_create_account: bool):
@@ -60,20 +59,20 @@ def sign(request, auto_create_account: bool):
     if request.method != 'POST':
         result['state'] = 'error'
         result['error_message'] = 'Request method is not POST.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
     
     data = json.loads(request.body)
 
     if 'username' not in data or data['username'] is None:
         result['state'] = 'error'
         result['error_message'] = 'Username is none.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
     username = data['username']
 
     if 'password' not in data or data['password'] is None:
         result['state'] = 'error'
         result['error_message'] = 'Password is none.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
     password = data['password']
 
     users = User.objects.filter(username=username)
@@ -92,11 +91,11 @@ def sign(request, auto_create_account: bool):
     if user.password != password:
         result['state'] = 'error'
         result['error_message'] = 'Password is incorrect.'
-        return Tools.toResponse(result)
+        return Tools.toResponse(result, 400)
 
     result['state'] = 'success'
     result['token'] = Tools.encode(username, password)
 
-    return Tools.toResponse(result)
+    return Tools.toResponse(result, 200)
 
 

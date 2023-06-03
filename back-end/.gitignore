@@ -1,3 +1,4 @@
 # Ignore specific files when "git add ."
 
 venv/
+/__pycache__/
