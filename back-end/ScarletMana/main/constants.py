@@ -1,0 +1,6 @@
+# Constants in this app
+
+DWARF_JOB_IDLE = 0
+DWARF_JOB_MINER = 1
+DWARF_JOB_MERCHANT = 2
+DWARF_JOB_SOLDIER = 3

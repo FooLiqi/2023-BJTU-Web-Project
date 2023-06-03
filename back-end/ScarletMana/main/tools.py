@@ -1,8 +1,44 @@
 from django.http import HttpResponse
+
+from .models import *
+
 import base64
 import json
 
 class Tools:
+
+    # 验证成功返回True，验证失败返回False
+    @staticmethod
+    def verifyToken(request):
+        if request.method != 'POST':
+            return False, Tools.toErrorResponse('Request method is not POST.')
+
+        data = json.loads(request.body)
+
+        if 'token' not in data or data['token'] is None:
+            return False, Tools.toErrorResponse('Token is none.')
+
+        [username, password] = Tools.decode(data['token'])
+
+        users = Player.objects.filter(username=username)
+
+        if users.count() == 0:
+            return False, Tools.toErrorResponse('Token is incorrect and username doesn\'t exist.')
+        
+        user = users.first()
+
+        if user.password != password:
+            return False, Tools.toErrorResponse('Password is incorrect.')
+        
+        return True, user
+
+
+    @staticmethod
+    def toErrorResponse(message: str):
+        result = {}
+        result['state'] = 'error'
+        result['error_message'] = message
+        return Tools.toResponse(result, status=400)
 
     @staticmethod
     def toResponse(dictionary, status):
