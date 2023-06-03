@@ -83,6 +83,7 @@ def sign(request, auto_create_account: bool):
         if auto_create_account == False:
             result['state'] = 'error'
             result['error_message'] = 'Username doesn\'t exist.'
+            return Tools.toResponse(result, 400)
         user = User(username=username, password=password)
         user.save()
     else:
