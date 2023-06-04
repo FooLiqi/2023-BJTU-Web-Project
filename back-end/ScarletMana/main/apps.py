@@ -15,6 +15,7 @@ class MainConfig(AppConfig):
         # print("READY", id(self))
         self.game_loop = GameLoopThread()
         self.game_loop.start()
+        # 在Ctrl C时同时关闭线程
         signal.signal(signal.SIGINT, self.stop_game_handler)
     
     def stop_game_handler(self, signum, frame):

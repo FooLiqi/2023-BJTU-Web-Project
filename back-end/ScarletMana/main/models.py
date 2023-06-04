@@ -48,6 +48,9 @@ class Player(models.Model):
 
     # 刷新资源(不储存)
     def refresh_resource(self):
+        if self.resource_refresh_count > 0:
+            self.resource_refresh_count -= 1
+            return
         self.resource_refresh_count = self.resource_refresh_count_max
         self.coin += 1
     

@@ -19,9 +19,7 @@ class GameLoopThread(threading.Thread):
         while not self.stop_event.is_set():
             players = Player.objects.all()
             for player in players:
-                player.resource_refresh_count -= 1
-                if player.resource_refresh_count <= 0:
-                    player.refresh_resource()
+                player.refresh_resource()
                 player.save()
             
             print("A loop ends.")
