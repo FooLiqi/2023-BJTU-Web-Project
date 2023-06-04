@@ -20,7 +20,6 @@ class GameLoopThread(threading.Thread):
             players = Player.objects.all()
             for player in players:
                 player.refresh_resource()
-                player.save()
             
             # print("A loop ends.")
             time.sleep(1)

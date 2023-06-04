@@ -1,5 +1,13 @@
 # Constants in this app
 
+# 资源刷新时间
+RESOURCE_REFRESH_TIME = 10
+
+# 雇佣矮人价格
+EMPLOY_DWARF_PRICE = 10
+
+
+# 矮人职业
 DWARF_JOB_IDLE = 0
 DWARF_JOB_MINER = 1
 DWARF_JOB_MERCHANT = 2

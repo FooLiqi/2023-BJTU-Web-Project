@@ -17,24 +17,21 @@ def employ(request):
         return someObject
     
     # dwarf
-    dwarf = Dwarf.Create(player)
-    dwarf.save()
-
-    # debug
-    # print(dwarf)
+    dwarf = player.employ_dwarf()
 
     # result
-    result = {
-        "firstname": str(dwarf.firstname),
-        "secondname": str(dwarf.secondname),
-        "sex": dwarf.sex,
-        "strength": dwarf.strength,
-        "dexterity": dwarf.dexterity,
-        "constitution": dwarf.constitution,
-        "intelligence": dwarf.intelligence,
-        "wisdom": dwarf.wisdom,
-        "charisma": dwarf.charisma,
-    }
+    with dwarf.lock:
+        result = {
+            "firstname": str(dwarf.firstname),
+            "secondname": str(dwarf.secondname),
+            "sex": dwarf.sex,
+            "strength": dwarf.strength,
+            "dexterity": dwarf.dexterity,
+            "constitution": dwarf.constitution,
+            "intelligence": dwarf.intelligence,
+            "wisdom": dwarf.wisdom,
+            "charisma": dwarf.charisma,
+        }
 
     return Tools.toResponse(result, 200)
 
@@ -109,8 +106,9 @@ def modifyDwarfJob(player, origin, target):
         return Tools.toErrorResponse("Origin job dwarf isn't enough.")
     else:
         dwarf = valid_dwarfs.first()
-        dwarf.job = target
-        dwarf.save()
+        with dwarf.lock:
+            dwarf.job = target # TODO 
+            dwarf.save()
         result = {"state": "success"}
         return Tools.toResponse(result, 200)
 
@@ -124,15 +122,17 @@ def resource(request):
         return someObject
     # get resource
     result = {}
-    result['state'] = 'success'
-    result['mana'] = user.mana
-    result['coin'] = user.coin
-    result['mineral'] = user.mineral
 
-    result['dwarf'] = user.dwarf
-    result['miner'] = user.miner
-    result['merchant'] = user.merchant
-    result['soldier'] = user.soldier
+    with user.lock:
+        result['state'] = 'success'
+        result['mana'] = user.mana
+        result['coin'] = user.coin
+        result['mineral'] = user.mineral
+
+        result['dwarf'] = user.dwarf
+        result['miner'] = user.miner
+        result['merchant'] = user.merchant
+        result['soldier'] = user.soldier
 
     return Tools.toResponse(result, 200)
 
@@ -170,8 +170,9 @@ def sign(request, auto_create_account: bool):
             return Tools.toErrorResponse('Username exists.')
         user = users.first()
 
-    if user.password != password:
-        return Tools.toErrorResponse('Password is incorrect.')
+    with user.lock:
+        if user.password != password:
+            return Tools.toErrorResponse('Password is incorrect.')
 
     result['state'] = 'success'
     result['token'] = Tools.encode(username, password)

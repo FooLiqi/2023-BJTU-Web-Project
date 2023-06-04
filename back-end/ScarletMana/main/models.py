@@ -1,31 +1,42 @@
+from typing import Any
 from django.db import models
 from django.conf import settings
 from django.db.models.base import ModelState
 
 import time
 import random
+import threading
 
 from .constants import *
 
-# Create your models here.
 
 class Player(models.Model):
+    # ===== Constructor =====
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.lock = threading.Lock()
+    
     # ===== Property =====
     ID = models.AutoField(primary_key=True)
 
     username = models.CharField(max_length=20, unique=True)
     password = models.CharField(max_length=20)
 
-    title = models.CharField(max_length=20)
-    motto = models.CharField(max_length=50)
+    title = models.CharField(max_length=20, null=True)
+    motto = models.CharField(max_length=50, null=True)
 
     mana = models.IntegerField(default=0)
     coin = models.IntegerField(default=0)
     mineral = models.IntegerField(default=0)
 
-    resource_refresh_count_max = models.IntegerField(default=10)
-    resource_refresh_count = models.IntegerField(default=0)
+    # 资源刷新时间与计时器
+    resource_refresh_count_max = models.IntegerField(default=RESOURCE_REFRESH_TIME)
+    resource_refresh_count = models.IntegerField(default=RESOURCE_REFRESH_TIME)
 
+    # 雇佣矮人价格
+    employ_dwarf_price = models.IntegerField(default=EMPLOY_DWARF_PRICE)
+
+    # 矮人及各职业矮人数量
     @property
     def dwarf(self):
         return Dwarf.objects.filter(player=self).count()
@@ -46,15 +57,32 @@ class Player(models.Model):
     def __str__(self):
         return self.username
 
-    # 刷新资源(不储存)
+    # 刷新资源 - 储存
     def refresh_resource(self):
         if self.resource_refresh_count > 0:
             self.resource_refresh_count -= 1
+        else:
+            self.resource_refresh_count = self.resource_refresh_count_max
+            self.coin += 1
+        self.save()
+    
+    # 雇佣矮人
+    def employ_dwarf(self):
+        if self.coin < self.employ_dwarf_price:
             return
-        self.resource_refresh_count = self.resource_refresh_count_max
-        self.coin += 1
+        self.coin -= self.employ_dwarf_price
+        self.save()
+        dwarf = Dwarf.Create(self)
+        dwarf.save()
+        return dwarf
     
 class DwarfFirstname(models.Model):
+    # ===== Constructor =====
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.lock = threading.Lock()
+    
+    # ===== Property =====
     ID = models.AutoField(primary_key=True)
     firstname = models.CharField(max_length=20, unique=True)
 
@@ -62,6 +90,12 @@ class DwarfFirstname(models.Model):
         return self.firstname
 
 class DwarfSecondname(models.Model):
+    # ===== Constructor =====
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.lock = threading.Lock()
+    
+    # ===== Property =====
     ID = models.AutoField(primary_key=True)
     secondname = models.CharField(max_length=20, unique=True)
 
@@ -69,6 +103,12 @@ class DwarfSecondname(models.Model):
         return self.secondname
 
 class Dwarf(models.Model):
+    # ===== Constructor =====
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
+        self.lock = threading.Lock()
+    
+    # ===== Property =====
     ID = models.AutoField(primary_key=True)
 
     # 在使用以下两个外键时，请将类型转换为str再输出
