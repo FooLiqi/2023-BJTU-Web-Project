@@ -2,11 +2,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('register/', views.register),
-    path('login/', views.login),
-    path('resource/', views.resource),
+    path('register', views.register),
+    path('login', views.login),
+    path('resource', views.resource),
 
-    path('employ/', views.employ),
+    path('employ', views.employ),
     path('dwarf/addMiner', views.addMiner),
     path('dwarf/addMerchant', views.addMerchant),
     path('dwarf/addSoldier', views.addSoldier),
@@ -14,5 +14,6 @@ urlpatterns = [
     path('dwarf/subtractMerchant', views.subtractMerchant),
     path('dwarf/subtractSoldier', views.subtractSoldier),
 
+    path('message', views.message),
 
 ]

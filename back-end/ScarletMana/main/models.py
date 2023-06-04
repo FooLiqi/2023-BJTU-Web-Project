@@ -36,6 +36,9 @@ class Player(models.Model):
     # 雇佣矮人价格
     employ_dwarf_price = models.IntegerField(default=EMPLOY_DWARF_PRICE)
 
+    # 剧情进度
+    story_process = models.IntegerField(default=0)
+
     # 矮人及各职业矮人数量
     @property
     def dwarf(self):

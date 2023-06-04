@@ -103,3 +103,14 @@
 
 * `api/dwarf/subtractSoldier`
 
+#### 2.2.6 读取信息面板欢迎信息
+
+* `api/message/`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * error_message：错误原因
+  * message：信息面板提示信息
+    * **注意**，这里的message是一个 **JSON数组**
+

@@ -32,6 +32,19 @@ def employ(request):
             "wisdom": dwarf.wisdom,
             "charisma": dwarf.charisma,
         }
+        result["message"] = MESSAGE_EMPLOY_DWARF
+        result["message"][0] = result["message"][0].format(
+            firstname = str(dwarf.firstname),
+            secondname = str(dwarf.secondname),
+            sex = "男性" if dwarf.sex == 0 else "女性",
+            ta = "他" if dwarf.sex == 0 else "她",
+            strength = dwarf.strength,
+            dexterity = dwarf.dexterity,
+            constitution = dwarf.constitution,
+            intelligence = dwarf.intelligence,
+            wisdom = dwarf.wisdom,
+            charisma = dwarf.charisma,
+        )
 
     return Tools.toResponse(result, 200)
 
@@ -105,11 +118,17 @@ def modifyDwarfJob(player, origin, target):
     if valid_dwarfs.count() == 0:
         return Tools.toErrorResponse("Origin job dwarf isn't enough.")
     else:
+        result = {"state": "success"}
+        result["message"] = MESSAGE_MODIFY_DWARF_JOB
         dwarf = valid_dwarfs.first()
         with dwarf.lock:
             dwarf.job = target # TODO 
             dwarf.save()
-        result = {"state": "success"}
+            result["message"][0] = result["message"][0].format(
+                firstname = str(dwarf.firstname),
+                secondname = str(dwarf.secondname),
+                newjob = DWARF_JOB_REFLECTION[target]
+            )
         return Tools.toResponse(result, 200)
 
 # ===== Resource =====
@@ -179,4 +198,24 @@ def sign(request, auto_create_account: bool):
 
     return Tools.toResponse(result, 200)
 
+# ===== Message =====
+def message(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
 
+    result = {
+        "state": "success",
+    }
+    with player.lock:
+        if player.story_process == 0:
+            player.story_process = 1
+            result["message"] = MESSAGE_ENTER_FIRST_TIME
+        else:
+            result["message"] = MESSAGE_ENTER
+        player.save()
+    
+    return Tools.toResponse(result, 200)
