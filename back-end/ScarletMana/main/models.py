@@ -10,6 +10,7 @@ from .constants import *
 # Create your models here.
 
 class Player(models.Model):
+    # ===== Property =====
     ID = models.AutoField(primary_key=True)
 
     username = models.CharField(max_length=20, unique=True)
@@ -21,6 +22,9 @@ class Player(models.Model):
     mana = models.IntegerField(default=0)
     coin = models.IntegerField(default=0)
     mineral = models.IntegerField(default=0)
+
+    resource_refresh_count_max = models.IntegerField(default=10)
+    resource_refresh_count = models.IntegerField(default=0)
 
     @property
     def dwarf(self):
@@ -38,9 +42,15 @@ class Player(models.Model):
     def soldier(self):
         return Dwarf.objects.filter(player=self, job=DWARF_JOB_SOLDIER).count()
 
+    # ===== Methods =====
     def __str__(self):
         return self.username
 
+    # 刷新资源(不储存)
+    def refresh_resource(self):
+        self.resource_refresh_count = self.resource_refresh_count_max
+        self.coin += 1
+    
 class DwarfFirstname(models.Model):
     ID = models.AutoField(primary_key=True)
     firstname = models.CharField(max_length=20, unique=True)
