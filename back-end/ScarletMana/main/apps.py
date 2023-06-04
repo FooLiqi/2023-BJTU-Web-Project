@@ -19,6 +19,6 @@ class MainConfig(AppConfig):
         signal.signal(signal.SIGINT, self.stop_game_handler)
     
     def stop_game_handler(self, signum, frame):
-        print("stop game!")
+        # print("stop game!")
         self.game_loop.stop()
         sys.exit(0)

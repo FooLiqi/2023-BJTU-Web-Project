@@ -22,7 +22,7 @@ class GameLoopThread(threading.Thread):
                 player.refresh_resource()
                 player.save()
             
-            print("A loop ends.")
+            # print("A loop ends.")
             time.sleep(1)
     
     def stop(self):
