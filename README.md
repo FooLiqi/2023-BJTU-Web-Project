@@ -59,6 +59,8 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * error_message：错误原因
+  * message：信息面板内容
+    * 这是一个 **JSON数组**
   * 接下来的属性均为雇佣矮人的属性
   * firstname：名
   * secondname：姓
@@ -78,6 +80,8 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * error_message：错误原因
+  * message：信息面板内容
+    * 这是一个 **JSON数组**
 
 ##### 2.2.5.1 增加矿工
 
@@ -111,6 +115,6 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * error_message：错误原因
-  * message：信息面板提示信息
+  * message：信息面板内容
     * **注意**，这里的message是一个 **JSON数组**
 
