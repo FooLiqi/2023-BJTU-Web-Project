@@ -30,5 +30,5 @@
 
 * 如何判断我现在要不要获取锁？
 
-  * 如果你访问了任何 `player.some_attributes`，那么就需要获取锁。
+  * 如果你访问了任何 `player.attribute/method`，那么就需要获取锁。
   * 如果你只是拿着 `player` 跑，那么就不需要获取锁

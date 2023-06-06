@@ -22,6 +22,7 @@ def employ(request):
     # result
     with dwarf.lock:
         result = {
+            "state": "success",
             "firstname": str(dwarf.firstname),
             "secondname": str(dwarf.secondname),
             "sex": dwarf.sex,
