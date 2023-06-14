@@ -35,6 +35,9 @@ class Player(models.Model):
     mana = models.IntegerField(default=0)
     coin = models.IntegerField(default=0)
     mineral = models.IntegerField(default=0)
+    
+    #关注
+    following = models.ManyToManyField('self', blank=True, symmetrical=False, related_name='followers')
 
     # Harvest
     mana_harvest_base = models.IntegerField(default=0)

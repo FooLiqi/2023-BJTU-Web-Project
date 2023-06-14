@@ -247,9 +247,10 @@ def leaderboardCoin(request):
     }
     
     rank = Player.objects.order_by('-coin')
-    with player.lock:
-        for i in range(0, len(rank)):
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             result["rank" + str(i+1)] = {
+                "UID": rank[i].ID,
                 "username": rank[i].username,
                 "coin": rank[i].coin,
             }
@@ -269,9 +270,10 @@ def leaderboardMana(request):
     }
     
     rank = Player.objects.order_by('-mana')
-    with player.lock:
-        for i in range(0, len(rank)):
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             result["rank" + str(i+1)] = {
+                "UID": rank[i].ID,
                 "username": rank[i].username,
                 "mana": rank[i].mana,
             }
@@ -291,12 +293,130 @@ def leaderboardMineral(request):
     }
     
     rank = Player.objects.order_by('-mineral')
-    with player.lock:
-        for i in range(0, len(rank)):
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             result["rank" + str(i+1)] = {
+                "UID": rank[i].ID,
                 "username": rank[i].username,
                 "mineral": rank[i].mineral,
             }
+    
+    return Tools.toResponse(result, 200)
+
+def leaderboardSubscribe(request):
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    with player.lock:
+        follower = player
+        
+        data = json.loads(request.body)
+        if 'followed' not in data or data['followed'] is None:
+            return False, Tools.toErrorResponse('followed is none.')
+        
+        followed_id = data['followed']
+        if Player.objects.filter(ID=followed_id).count() == 0:
+            return Tools.toErrorResponse("Followed player doesn't exist.")
+        
+        print(followed_id)
+        
+        result = {
+            "state": "success",
+        }
+        
+        followed = Player.objects.get(ID=followed_id)
+        
+        if follower != followed:  # 避免自己关注自己
+            if follower.following.filter(ID=followed_id).exists():
+                follower.following.remove(followed)
+                result["message"] = f"successfully unsubscribe {followed_id}"
+            else:
+                follower.following.add(followed)
+                result["message"] = f"successfully subscribe {followed_id}"
+    
+    return Tools.toResponse(result, 200)
+    
+def leaderboardSubscribeCoin(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    result = {
+        "state": "success",
+    }
+    
+    rank = Player.objects.order_by('-coin')
+    following_players = player.following.all()
+    cnt = 0
+    for i in range(0, len(rank)):
+        with rank[i].lock:
+            if rank[i] in following_players or rank[i] == player:
+                cnt += 1
+                result["rank" + str(cnt)] = {
+                    "UID": rank[i].ID,
+                    "username": rank[i].username,
+                    "coin": rank[i].coin,
+                }
+    
+    return Tools.toResponse(result, 200)
+
+def leaderboardSubscribeMana(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+
+    result = {
+        "state": "success",
+    }
+    
+    rank = Player.objects.order_by('-mana')
+    following_players = player.following.all()
+    cnt = 0
+    for i in range(0, len(rank)):
+        with rank[i].lock:
+            if rank[i] in following_players or rank[i] == player:
+                cnt += 1
+                result["rank" + str(cnt)] = {
+                    "UID": rank[i].ID,
+                    "username": rank[i].username,
+                    "mana": rank[i].mana,
+                }
+    
+    return Tools.toResponse(result, 200)
+
+def leaderboardSubscribeMineral(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    result = {
+        "state": "success",
+    }
+    
+    rank = Player.objects.order_by('-mineral')
+    following_players = player.following.all()
+    cnt = 0
+    for i in range(0, len(rank)):
+        with rank[i].lock:
+            if rank[i] in following_players or rank[i] == player:
+                cnt += 1
+                result["rank" + str(cnt)] = {
+                    "UID": rank[i].ID,
+                    "username": rank[i].username,
+                    "mineral": rank[i].mineral,
+                }
     
     return Tools.toResponse(result, 200)
 
@@ -342,7 +462,6 @@ def learnSkill(request):
         player = someObject
     else:
         return someObject
-    
     target_skill_id = json.loads(request.body)["skill_id"]
 
     target_skill = Skill.objects.filter(ID=target_skill_id)
@@ -393,3 +512,4 @@ def queryLearnedSkills(request):
     result["learned_skills"].sort()
     
     return Tools.toResponse(result, 200)
+
