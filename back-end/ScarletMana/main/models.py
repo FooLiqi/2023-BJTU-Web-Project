@@ -28,6 +28,9 @@ class Player(models.Model):
     mana = models.IntegerField(default=0)
     coin = models.IntegerField(default=0)
     mineral = models.IntegerField(default=0)
+    
+    #关注
+    following = models.ManyToManyField('self', blank=True, symmetrical=False, related_name='followers')
 
     # 资源刷新时间与计时器
     resource_refresh_count_max = models.IntegerField(default=RESOURCE_REFRESH_TIME)

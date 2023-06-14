@@ -128,7 +128,8 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * rank{i}：排行榜上第i个玩家的信息，包括以下信息
-    * username：玩家的id
+    * UID：玩家的id
+    * username：玩家的用户名
     * coin：玩家的金币数
 
 #### 2.3.2 魔法排行榜
@@ -139,8 +140,9 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * rank{i}：排行榜上第i个玩家的信息，包括以下信息
-    * username：玩家的id
-    * mana：玩家的金币数
+    * UID：玩家的id
+    * username：玩家的用户名
+    * mana：玩家的法力值
 
 #### 2.3.3 矿物排行榜
 
@@ -150,8 +152,54 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * rank{i}：排行榜上第i个玩家的信息，包括以下信息
-    * username：玩家的id
-    * mineral：玩家的金币数
+    * UID：玩家的id
+    * username：玩家的用户名
+    * mineral：玩家的矿物数
 
+#### 2.3.4 关注玩家
 
+* `api/leaderboard/subscribe`
+* 前端TO后端
+  * token：令牌
+  * followed：关注的玩家ID
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * message：具体信息。
+    * `successfully unsubscribe ID` 为成功取消关注
+    * `successfully subscribe ID` 为成功关注
 
+#### 2.3.5 关注玩家金币榜
+
+* `api/leaderboard/subscribe/coin`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * rank{i}：排行榜上第i个玩家的信息，包括以下信息
+    * UID：玩家的id
+    * username：玩家的用户名
+    * coin：玩家的金币数
+
+#### 2.3.6 关注玩家魔法榜
+
+* `api/leaderboard/subscribe/mana`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * rank{i}：排行榜上第i个玩家的信息，包括以下信息
+    * UID：玩家的id
+    * username：玩家的用户名
+    * mana：玩家的法力值
+
+#### 2.3.7 矿物排行榜
+
+* `api/leaderboard/subscribe/mineral`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * rank{i}：排行榜上第i个玩家的信息，包括以下信息
+    * UID：玩家的id
+    * username：玩家的用户名
+    * mineral：玩家的矿物数

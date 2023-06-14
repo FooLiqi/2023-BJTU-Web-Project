@@ -20,5 +20,8 @@ urlpatterns = [
     path('leaderboard/coin', views.leaderboardCoin),
     path('leaderboard/mana', views.leaderboardMana),
     path('leaderboard/mineral', views.leaderboardMineral),
-    # path('leaderboard/subscribe', views.leaderboardSubscribe),
+    path('leaderboard/subscribe', views.leaderboardSubscribe),
+    path('leaderboard/subscribe/coin', views.leaderboardSubscribeCoin),
+    path('leaderboard/subscribe/mana', views.leaderboardSubscribeMana),
+    path('leaderboard/subscribe/mineral', views.leaderboardSubscribeMineral),
 ]
