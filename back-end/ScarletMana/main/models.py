@@ -135,9 +135,9 @@ class Dwarf(models.Model):
 
     @staticmethod
     def Create(player: Player):
-        # 设置毫秒种子
-        random.seed(time.perf_counter())
-        # print(time.perf_counter())
+        # 默认以系统时间为种子
+        random.seed()
+        # print(time.perf_ounter())
 
         if DwarfFirstname.objects.count() == 0:
             return None
