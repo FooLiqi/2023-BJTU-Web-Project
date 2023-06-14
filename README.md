@@ -35,7 +35,9 @@
   * error_message：错误原因
   * token：令牌（只有在成功时才有值）
 
-#### 2.2.3 获取资源
+### 2.3 资源相关
+
+#### 2.3.1 获取资源
 
 * `api/resource/`
 * 前端TO后端
@@ -51,7 +53,9 @@
   * merchant：职业为商人的矮人数量
   * soldier：职业为佣兵的矮人数量
 
-#### 2.2.4 雇佣矮人
+### 2.4 矮人相关
+
+#### 2.4.1 雇佣矮人
 
 * `api/employ/`
 * 前端TO后端
@@ -72,7 +76,7 @@
   * wisdom
   * charisma
 
-#### 2.2.5 修改矮人职业
+#### 2.4.2 修改矮人职业
 
 * 所有修改均采用同一协议，只有URI不同
 * 前端TO后端
@@ -83,31 +87,33 @@
   * message：信息面板内容
     * 这是一个 **JSON数组**
 
-##### 2.2.5.1 增加矿工
+##### 2.4.2.1 增加矿工
 
 * `api/dwarf/addMiner`
 
-##### 2.2.5.2 减少矿工
+##### 2.4.2.2 减少矿工
 
 * `api/dwarf/subtractMiner`
 
-##### 2.2.5.1 增加商人
+##### 2.4.2.1 增加商人
 
 * `api/dwarf/addMerchant`
 
-##### 2.2.5.2 减少商人
+##### 2.4.2.2 减少商人
 
 * `api/dwarf/subtractMerchant`
 
-##### 2.2.5.1 增加佣兵
+##### 2.4.2.1 增加佣兵
 
 * `api/dwarf/addSoldier`
 
-##### 2.2.5.2 减少佣兵
+##### 2.4.2.2 减少佣兵
 
 * `api/dwarf/subtractSoldier`
 
-#### 2.2.6 读取信息面板欢迎信息
+### 2.5 信息面板
+
+#### 2.5.1 读取信息面板欢迎信息
 
 * `api/message/`
 * 前端TO后端
@@ -118,9 +124,9 @@
   * message：信息面板内容
     * **注意**，这里的message是一个 **JSON数组**
 
-### 2.3 排行榜
+### 2.6 排行榜
 
-#### 2.3.1 金币排行榜
+#### 2.6.1 金币排行榜
 
 * `api/leaderboard/coin`
 * 前端TO后端
@@ -131,7 +137,7 @@
     * username：玩家的id
     * coin：玩家的金币数
 
-#### 2.3.2 魔法排行榜
+#### 2.6.2 魔法排行榜
 
 * `api/leaderboard/mana`
 * 前端TO后端
@@ -142,7 +148,7 @@
     * username：玩家的id
     * mana：玩家的金币数
 
-#### 2.3.3 矿物排行榜
+#### 2.6.3 矿物排行榜
 
 * `api/leaderboard/mineral`
 * 前端TO后端
@@ -153,5 +159,113 @@
     * username：玩家的id
     * mineral：玩家的金币数
 
+### 2.7 技能相关
 
+#### 2.7.1 查看技能列表
 
+* `api/skill/query_all_skills`
+
+* 前端TO后端
+
+  * token：令牌
+
+* 后端TO前端
+
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+
+  * error_message：错误原因
+
+  * data：数据库详细信息
+
+    * data是一个List
+
+    * List中的每个元素是一个Dictionary
+
+    * Dictionary包含以下键值对
+
+      * "id": int
+        * ID
+      * "name": string
+        * 名字
+      * "effect_describe": string
+        * 效果描述
+      * "background_describe": string
+        * 背景描述
+      * "precondition": int
+        * 前置技能ID
+      * "mana_cost", "coin_cost", "mineral_cost"
+        * 资源花费，需要有这些资源，才可以学习这个技能
+        * **注意！**这些Key **可能不存在**，不存在时，则表示对这个资源 **没有需求**
+      * "dwarf_limit"
+        * 矮人限制，需要有这些数量的矮人，才可以学习这个技能
+        * 只对数量进行限制，不消耗矮人
+        * **注意！**这个Key **可能不存在**，不存在时，则表示对这个资源 **没有限制**
+
+    * 例子：
+
+      ```json
+      [
+          {
+              "id": 1,
+              "name": "失落的绯红魔法书",
+              "effect_describe": "矿场中的这本失落魔法书让你开始学习魔法...",
+              "background_describe": "\"潘多拉的魔盒被打开了...\"",
+              "precondition": 0,
+              "coin_cost": 1
+          },
+          {
+              "id": 2,
+              "name": "魔法书的扉页",
+              "effect_describe": "你开始了解到了这本书蕴藏的强大力量",
+              "background_describe": "[写在魔法书扉页上的文字]",
+              "precondition": 1,
+              "mana_cost": 5
+          },
+              {
+              "id": 3,
+              "name": "照明术",
+              "effect_describe": "可以让你照亮周围的环境",
+              "background_describe": "你从镇上的市场中购...",
+              "precondition": 1,
+              "coin_cost": 10
+          }
+      ]
+      ```
+
+#### 2.7.2 学习技能
+
+* `api/skill/learn`
+* 前端TO后端
+  * token：令牌
+  * skill_id：想学习的技能ID
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * error_message：错误原因
+
+#### 2.8.2 查看玩家所学习的所有技能ID
+
+* `api/skill/query_learned_skills`
+
+* 前端TO后端
+
+  * token：令牌
+
+* 后端TO前端
+
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+
+  * error_message：错误原因
+
+  * learned_skills：已经学习到的技能
+
+    * 这是一个List，里面每个元素都是一个Integer，表示技能的ID
+
+    * 保证元素从小到大
+
+    * 例：
+
+      ```json
+      [1, 2]
+      ```
+
+      

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'import_export',
     'main',
 ]
 
@@ -139,6 +140,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# For django_import_export
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 # ===== Django REST Framework =====
 # REST_FRAMEWORK = {

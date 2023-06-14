@@ -21,4 +21,9 @@ urlpatterns = [
     path('leaderboard/mana', views.leaderboardMana),
     path('leaderboard/mineral', views.leaderboardMineral),
     # path('leaderboard/subscribe', views.leaderboardSubscribe),
+
+    # ===== Skill ===== #
+    path('skill/query_all_skills', views.queryAllSkills),
+    path('skill/learn', views.learnSkill),
+    path('skill/query_learned_skills', views.queryLearnedSkills),
 ]

@@ -1,0 +1,32 @@
+[
+    {
+        "Comment": "这个文件只是文档，并不提供批量导入的功能，需要自己手动导入"
+    },
+    {
+        "id": 1,
+        "name": "失落的绯红魔法书",
+        "effect_describe": "矿场中的这本失落魔法书让你开始学习魔法...",
+        "background_describe": "\"潘多拉的魔盒被打开了...\"",
+        "precondition": 0,
+        "coin_cost": 1,
+        "mana_harvest_base_increase": 1
+    },
+    {
+        "id": 2,
+        "name": "魔法书的扉页",
+        "effect_describe": "你开始了解到了这本书蕴藏的强大力量，你的法力提升速度加快了",
+        "background_describe": "[写在魔法书扉页上的文字]",
+        "precondition": 1,
+        "mana_cost": 5,
+        "mana_harvest_base_increase": 1
+    },
+    {
+        "id": 3,
+        "name": "照明术",
+        "effect_describe": "可以让你照亮周围的环境。你可以使用这个魔法提升自己的工作效率，使每秒钟获得更多金币。",
+        "background_describe": "你从镇上的市场中购入了一本新手魔法书，想从中开始学习魔法的基本知识",
+        "precondition": 1,
+        "coin_cost": 10,
+        "coin_harvest_base_increase": 1
+    }
+]

@@ -1,10 +1,14 @@
 # Constants in this app
 
+# DEBUG MODE
+DEBUG_MODE_SKILL = True
+
 # 资源刷新时间
 RESOURCE_REFRESH_TIME = 10
 
 # 雇佣矮人价格
 EMPLOY_DWARF_PRICE = 10
+EMPLOY_DWARF_SALARY = 0.25
 
 # 矮人职业
 DWARF_JOB_IDLE = 0

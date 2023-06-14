@@ -12,6 +12,7 @@ from .constants import *
 # Account:      登录、注册
 # Message：     欢迎信息
 # Leaderboard:  排行榜
+# Skill:        学习技能，查看所有技能，查看某个玩家学习技能的情况
 
 
 # ===== Dwarf ===== #
@@ -26,6 +27,9 @@ def employ(request):
     
     # dwarf
     dwarf = player.employ_dwarf()
+    
+    if dwarf is None:
+        return Tools.toErrorResponse("You don't have enough coins.")
 
     # result
     with dwarf.lock:
@@ -128,7 +132,7 @@ def modifyDwarfJob(player, origin, target):
         return Tools.toErrorResponse("Origin job dwarf isn't enough.")
     else:
         result = {"state": "success"}
-        result["message"] = MESSAGE_MODIFY_DWARF_JOB
+        result["message"] = MESSAGE_MODIFY_DWARF_JOB.copy()
         dwarf = valid_dwarfs.first()
         with dwarf.lock:
             dwarf.job = target # TODO 
@@ -293,5 +297,99 @@ def leaderboardMineral(request):
                 "username": rank[i].username,
                 "mineral": rank[i].mineral,
             }
+    
+    return Tools.toResponse(result, 200)
+
+# ===== Skill ===== #
+# 查询所有技能
+def queryAllSkills(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    result = {
+        "state": "success",
+        "data": [],
+    }
+
+    skills = Skill.objects.all()
+    
+    for skill in skills:
+        with skill.lock:
+            dic = {
+                "id": skill.ID,
+                "name": skill.name,
+                "effect_describe": skill.effect_describe,
+                "background_describe": skill.background_describe,
+                "precondition": skill.precondition,
+            }
+            if skill.mana_cost > 0: dic["mana_cost"] = skill.mana_cost
+            if skill.coin_cost > 0: dic["coin_cost"] = skill.coin_cost
+            if skill.mineral_cost > 0: dic["mineral_cost"] = skill.mineral_cost
+            if skill.dwarf_limit > 0: dic["dwarf_limit"] = skill.dwarf_limit
+            result["data"].append(dic)
+    
+    return Tools.toResponse(result, 200)
+
+# 学习某个技能
+def learnSkill(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    target_skill_id = json.loads(request.body)["skill_id"]
+
+    target_skill = Skill.objects.filter(ID=target_skill_id)
+    if target_skill.count() <= 0:
+        return Tools.toErrorResponse("Skill not found.")
+    else:
+        target_skill = target_skill[0]
+
+    learned_skills = SkillLearn.objects.filter(player=player, skill=target_skill)
+
+    if learned_skills.count() > 0:
+        return Tools.toErrorResponse("Skill has been learned.")
+    
+    skillLearn = SkillLearn(player=player, skill=target_skill)
+    # 下面这个learn方法包含了save的作用，不需要再手动save
+    # 如果条件不足以学习，则不会改变数据，也不会save
+    # 具体参见该函数的注释
+    # 这里因为skillLearn这个记录，尚未被save，所以不可能被其他线程读取，所以不用加锁
+    learn_result = skillLearn.learn()
+    if learn_result != "success":
+        return Tools.toErrorResponse(learn_result)
+
+    result = {"state": "success"}
+
+    return Tools.toResponse(result, 200)
+
+    
+# 查询一个玩家学习的所有技能ID
+def queryLearnedSkills(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+
+    result = {
+        "state": "success",
+        "learned_skills": [],
+    }
+
+    learned_skills = SkillLearn.objects.filter(player=player)
+
+    for learned_skill in learned_skills:
+        with learned_skill.lock:
+            with learned_skill.skill.lock:
+                result["learned_skills"].append(learned_skill.skill.ID)
+    result["learned_skills"].sort()
     
     return Tools.toResponse(result, 200)
