@@ -6,7 +6,15 @@ from .tools import Tools
 from .models import *
 from .constants import *
 
-# ===== Dwarf =====
+# ===== Catalog ===== #
+# Dwarf:        雇佣矮人、改变矮人职业
+# Resource:     获取玩家资源
+# Account:      登录、注册
+# Message：     欢迎信息
+# Leaderboard:  排行榜
+
+
+# ===== Dwarf ===== #
 # 雇佣矮人
 def employ(request):
     # verify token
@@ -132,7 +140,7 @@ def modifyDwarfJob(player, origin, target):
             )
         return Tools.toResponse(result, 200)
 
-# ===== Resource =====
+# ===== Resource ===== #
 def resource(request):
     # verify token
     state, someObject = Tools.verifyToken(request=request)
@@ -156,7 +164,7 @@ def resource(request):
 
     return Tools.toResponse(result, 200)
 
-# ===== Account =====
+# ===== Account ===== #
 def login(request):
     return sign(request=request, auto_create_account=False)
 
@@ -199,7 +207,7 @@ def sign(request, auto_create_account: bool):
 
     return Tools.toResponse(result, 200)
 
-# ===== Message =====
+# ===== Message ===== #
 def message(request):
     # verify token
     state, someObject = Tools.verifyToken(request=request)
@@ -220,8 +228,6 @@ def message(request):
         player.save()
     
     return Tools.toResponse(result, 200)
-
-
 
 # ===== Leaderboard ===== #
 def leaderboardCoin(request):
