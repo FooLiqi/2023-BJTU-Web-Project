@@ -242,9 +242,9 @@ def leaderboardCoin(request):
         "state": "success",
     }
     
-    with player.lock:
-        rank = Player.objects.order_by('-coin')
-        for i in range(0, len(rank)):
+    rank = Player.objects.order_by('-coin')
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
@@ -265,9 +265,9 @@ def leaderboardMana(request):
         "state": "success",
     }
     
-    with player.lock:
-        rank = Player.objects.order_by('-mana')
-        for i in range(0, len(rank)):
+    rank = Player.objects.order_by('-mana')
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
@@ -288,9 +288,9 @@ def leaderboardMineral(request):
         "state": "success",
     }
     
-    with player.lock:
-        rank = Player.objects.order_by('-mineral')
-        for i in range(0, len(rank)):
+    rank = Player.objects.order_by('-mineral')
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
@@ -347,11 +347,11 @@ def leaderboardSubscribeCoin(request):
         "state": "success",
     }
     
-    with player.lock:
-        rank = Player.objects.order_by('-coin')
-        following_players = player.following.all()
-        cnt = 0
-        for i in range(0, len(rank)):
+    rank = Player.objects.order_by('-coin')
+    following_players = player.following.all()
+    cnt = 0
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             if rank[i] in following_players or rank[i] == player:
                 cnt += 1
                 result["rank" + str(cnt)] = {
@@ -374,11 +374,11 @@ def leaderboardSubscribeMana(request):
         "state": "success",
     }
     
-    with player.lock:
-        rank = Player.objects.order_by('-mana')
-        following_players = player.following.all()
-        cnt = 0
-        for i in range(0, len(rank)):
+    rank = Player.objects.order_by('-mana')
+    following_players = player.following.all()
+    cnt = 0
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             if rank[i] in following_players or rank[i] == player:
                 cnt += 1
                 result["rank" + str(cnt)] = {
@@ -401,11 +401,11 @@ def leaderboardSubscribeMineral(request):
         "state": "success",
     }
     
-    with player.lock:
-        rank = Player.objects.order_by('-mineral')
-        following_players = player.following.all()
-        cnt = 0
-        for i in range(0, len(rank)):
+    rank = Player.objects.order_by('-mineral')
+    following_players = player.following.all()
+    cnt = 0
+    for i in range(0, len(rank)):
+        with rank[i].lock:
             if rank[i] in following_players or rank[i] == player:
                 cnt += 1
                 result["rank" + str(cnt)] = {
