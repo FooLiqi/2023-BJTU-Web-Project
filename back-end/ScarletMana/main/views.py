@@ -32,8 +32,8 @@ def employ(request):
             "intelligence": dwarf.intelligence,
             "wisdom": dwarf.wisdom,
             "charisma": dwarf.charisma,
+            "message": MESSAGE_EMPLOY_DWARF.copy(),
         }
-        result["message"] = MESSAGE_EMPLOY_DWARF
         result["message"][0] = result["message"][0].format(
             firstname = str(dwarf.firstname),
             secondname = str(dwarf.secondname),
