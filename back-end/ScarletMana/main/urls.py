@@ -15,5 +15,10 @@ urlpatterns = [
     path('dwarf/subtractSoldier', views.subtractSoldier),
 
     path('message', views.message),
-
+    
+    #=========== Leaderboard ===========#
+    path('leaderboard/coin', views.leaderboardCoin),
+    path('leaderboard/mana', views.leaderboardMana),
+    path('leaderboard/mineral', views.leaderboardMineral),
+    # path('leaderboard/subscribe', views.leaderboardSubscribe),
 ]

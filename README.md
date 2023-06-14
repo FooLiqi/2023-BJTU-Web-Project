@@ -118,3 +118,40 @@
   * message：信息面板内容
     * **注意**，这里的message是一个 **JSON数组**
 
+### 2.3 排行榜
+
+#### 2.3.1 金币排行榜
+
+* `api/leaderboard/coin`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * rank{i}：排行榜上第i个玩家的信息，包括以下信息
+    * username：玩家的id
+    * coin：玩家的金币数
+
+#### 2.3.2 魔法排行榜
+
+* `api/leaderboard/mana`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * rank{i}：排行榜上第i个玩家的信息，包括以下信息
+    * username：玩家的id
+    * mana：玩家的金币数
+
+#### 2.3.3 矿物排行榜
+
+* `api/leaderboard/mineral`
+* 前端TO后端
+  * token：令牌
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * rank{i}：排行榜上第i个玩家的信息，包括以下信息
+    * username：玩家的id
+    * mineral：玩家的金币数
+
+
+

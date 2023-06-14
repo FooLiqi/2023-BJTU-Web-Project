@@ -220,3 +220,72 @@ def message(request):
         player.save()
     
     return Tools.toResponse(result, 200)
+
+
+
+# ===== Leaderboard ===== #
+def leaderboardCoin(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    result = {
+        "state": "success",
+    }
+    
+    rank = Player.objects.order_by('-coin')
+    with player.lock:
+        for i in range(0, len(rank)):
+            result["rank" + str(i+1)] = {
+                "username": rank[i].username,
+                "coin": rank[i].coin,
+            }
+    
+    return Tools.toResponse(result, 200)
+
+def leaderboardMana(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    result = {
+        "state": "success",
+    }
+    
+    rank = Player.objects.order_by('-mana')
+    with player.lock:
+        for i in range(0, len(rank)):
+            result["rank" + str(i+1)] = {
+                "username": rank[i].username,
+                "mana": rank[i].mana,
+            }
+    
+    return Tools.toResponse(result, 200)
+
+def leaderboardMineral(request):
+    # verify token
+    state, someObject = Tools.verifyToken(request=request)
+    if state:
+        player = someObject
+    else:
+        return someObject
+    
+    result = {
+        "state": "success",
+    }
+    
+    rank = Player.objects.order_by('-mineral')
+    with player.lock:
+        for i in range(0, len(rank)):
+            result["rank" + str(i+1)] = {
+                "username": rank[i].username,
+                "mineral": rank[i].mineral,
+            }
+    
+    return Tools.toResponse(result, 200)
