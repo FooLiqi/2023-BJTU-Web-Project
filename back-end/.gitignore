@@ -1,0 +1,9 @@
+# Ignore specific files when "git add ."
+
+venv/
+ScarletMana/.vscode/
+ScarletMana/ScarletMana/__pycache__/
+ScarletMana/main/__pycache__/
+ScarletMana/main/migrations/
+ScarletMana/main/minecraft_llm_support_backend/__pycache__/
+/__pycache__/

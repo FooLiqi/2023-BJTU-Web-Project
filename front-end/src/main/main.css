@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "SmileySans";
+  src: url('../../public/SourceHanSerif-Medium.ttc');
+}
+
+.layout {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  height: 100vh;
+  padding-left: 100px;
+  padding-right: 150px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.right-layout {
+  flex: 7; 
+  background-color:#ffffff;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-layout{
+	flex: 3; /* 占比30% */
+  height :100vh;
+  background-color: #ffffff;
+}
+
+.message-box{
+  background-color: #ffffff;
+  padding: 10px; 
+  height: 80vh;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+}
+
+.container > * {
+  flex: 1;
+}
+
+.container > :first-child {
+  flex-basis: 70%; /* 左边占 70% 的宽度 */
+}
+
+.container > :last-child {
+  flex-basis: 30%; /* 右边占 30% 的宽度 */
+}
+
+.fade-in {
+  font-size: 150%;
+  font-family: 'SmileySans';
+  letter-spacing: 1px;
+  color:black;
+  padding-top: 10px;
+  opacity: 0;
+  
+  
+}
+
+.fade-in.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-inner {
+  padding: 5px;
+  grid-template-columns: auto;
+  position: relative;
+  height: 50px;
+  margin : 10px;
+  font-size: 150%;
+  font-family: 'SmileySans';
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  border: 2px solid black;
+  margin: 30px;
+  padding : 9px
+}
+
+.button {
+  padding: 5px;
+  grid-template-columns: auto;
+  position: relative;
+  height: 50px;
+  width: 100px;
+  margin : 10px;
+  font-size: 150%;
+  font-family: 'SmileySans';
+}
+.button-opration {
+  display: flex;
+  font-family: 'SmileySans';
+}
+.operation {
+  padding-top: 25px;
+}
+.default-font {
+  font-size: 150%;
+  font-family: 'SmileySans';
+}
+.selected-span {
+  cursor: pointer;
+}
+.my-button {
+  margin : 10px;
+  font-size: 100%;
+  font-family: 'SmileySans';
+  border: 2px solid black;
+  padding: 5px;
+  display: inline-block;
+}
+
+.my-button2 {
+  font-size: 100%;
+  font-family: 'SmileySans';
+  border: 2px solid black;
+  padding: 2px;
+  display: inline-block;
+}
+
+.multiline-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.default-font .ant-table-cell {
+  font-size: 150%;
+  font-family: 'SmileySans';
+}
+
+.default-h-font {
+  font-weight: bold;
+  font-size: 130%;
+  font-family: 'SmileySans';
+}
+.mini-font {
+  font-size: 100%;
+  font-family: 'SmileySans';
+}
+
+.my-component {
+  border: 2px solid black;
+  width: 200px;
+}
+
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+}
+.my-textarea{
+  border: 2px solid black;
+  width: 20vw;
+  height: 95%;
+  font-size: 130%;
+  font-family: 'SmileySans';
+  resize: none;
+}
+.top-component {
+  flex: 1;
+}
+
+.bottom-component {
+  flex: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-component-right {
+  border: 2px solid black;
+  width: 3vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 98%;
+  font-size: 130%;
+  font-family: 'SmileySans';
+  resize: none;
+  align-items: center;
+  flex: 1;
+  
+}
+
+.under-line {
+  text-decoration: underline;
+}

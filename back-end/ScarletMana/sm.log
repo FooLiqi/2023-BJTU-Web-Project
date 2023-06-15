@@ -1,0 +1,366 @@
+nohup: ignoring input
+Bad Request: /api/resource
+[15/Jun/2023 17:17:42] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/message
+[15/Jun/2023 17:17:43] "POST /api/message HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+[15/Jun/2023 17:17:43] "POST /api/login HTTP/1.1" 200 45
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+[15/Jun/2023 17:17:43] "POST /api/login HTTP/1.1" 200 45
+[15/Jun/2023 17:17:43] "POST /api/leaderboard/mana HTTP/1.1" 200 749
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 400 53
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:43] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:44] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:44] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:44] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:44] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:46] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:46] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:46] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:46] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:46] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:47] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:47] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:47] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:47] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:49] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:49] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:49] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:49] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:50] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:50] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:50] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:50] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:50] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:17:51] "POST /api/resource HTTP/1.1" 200 130
+Bad Request: /api/resource
+[15/Jun/2023 17:17:51] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:51] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/message
+Bad Request: /api/skill/query_all_skills
+[15/Jun/2023 17:17:51] "POST /api/message HTTP/1.1" 400 53
+Bad Request: /api/skill/query_learned_skills
+[15/Jun/2023 17:17:51] "POST /api/skill/query_learned_skills HTTP/1.1" 400 53
+[15/Jun/2023 17:17:51] "POST /api/skill/query_all_skills HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:52] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:52] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:52] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:52] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:52] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:52] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:53] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:53] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:53] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:54] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:55] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:56] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:57] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:58] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:17:59] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:00] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:01] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:02] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:03] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:04] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:05] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/message
+[15/Jun/2023 17:18:05] "POST /api/message HTTP/1.1" 400 53
+Bad Request: /api/skill/query_all_skills
+[15/Jun/2023 17:18:05] "POST /api/skill/query_all_skills HTTP/1.1" 400 53
+Bad Request: /api/skill/query_learned_skills
+[15/Jun/2023 17:18:05] "POST /api/skill/query_learned_skills HTTP/1.1" 400 53
+Bad Request: /api/message
+[15/Jun/2023 17:18:05] "POST /api/message HTTP/1.1" 400 53
+Bad Request: /api/skill/query_all_skills
+[15/Jun/2023 17:18:05] "POST /api/skill/query_all_skills HTTP/1.1" 400 53
+Bad Request: /api/skill/query_learned_skills
+[15/Jun/2023 17:18:05] "POST /api/skill/query_learned_skills HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:05] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:05] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:05] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:05] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:05] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:06] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:06] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:06] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/leaderboard/mana
+[15/Jun/2023 17:18:06] "POST /api/leaderboard/mana HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:06] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/message
+[15/Jun/2023 17:18:06] "POST /api/message HTTP/1.1" 400 53
+Bad Request: /api/skill/query_all_skills
+[15/Jun/2023 17:18:06] "POST /api/skill/query_all_skills HTTP/1.1" 400 53
+Bad Request: /api/skill/query_learned_skills
+[15/Jun/2023 17:18:06] "POST /api/skill/query_learned_skills HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:07] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:08] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:08] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:08] "POST /api/resource HTTP/1.1" 400 53
+Bad Request: /api/resource
+[15/Jun/2023 17:18:08] "POST /api/resource HTTP/1.1" 400 53
+[15/Jun/2023 17:18:08] "POST /api/login HTTP/1.1" 200 45
+Bad Request: /api/resource
+[15/Jun/2023 17:18:08] "POST /api/resource HTTP/1.1" 400 53
+[15/Jun/2023 17:18:08] "POST /api/leaderboard/mana HTTP/1.1" 200 749
+[15/Jun/2023 17:18:08] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:10] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:10] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:10] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:10] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:10] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:11] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:11] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:11] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:11] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:11] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:12] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:13] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:15] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:17] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:18] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:20] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:21] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:22] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:23] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:24] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:25] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:26] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:27] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:28] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:29] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:30] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:31] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:32] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:33] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:34] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:35] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:36] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:37] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:38] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:39] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:40] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:41] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:42] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:43] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:44] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:45] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:46] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:47] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:48] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:49] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:50] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:51] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:52] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:53] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:54] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:55] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:56] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:57] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:58] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:18:59] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:00] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:01] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:02] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:03] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:04] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:05] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:06] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:07] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:08] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:09] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:10] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:11] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:12] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:13] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:13] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:13] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:15] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 17:19:15] "POST /api/skill/query_all_skills HTTP/1.1" 200 2721
+[15/Jun/2023 17:19:15] "POST /api/skill/query_learned_skills HTTP/1.1" 200 58
+[15/Jun/2023 17:19:15] "POST /api/leaderboard/mana HTTP/1.1" 200 749
+[15/Jun/2023 17:19:15] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:16] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:17] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:17] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:17] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:17] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:18] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:18] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:18] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:18] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:18] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:19] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:20] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:20] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:20] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:20] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:20] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:21] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:21] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:21] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:21] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:22] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:22] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:22] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 17:19:22] "POST /api/resource HTTP/1.1" 200 130

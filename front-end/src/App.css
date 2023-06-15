@@ -1,0 +1,62 @@
+.active{
+  color: blue;
+}
+/* 聊天窗口样式 */
+.chat-window {
+  height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* 消息样式 */
+.message {
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.message.user {
+  background-color: #e2f3ff;
+}
+
+.message.bot {
+  background-color: #e6ffe2;
+}
+
+/* 输入区域样式 */
+.input-area {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-area input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input-area button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background-color: #45a049;
+}
+
+.qwq{
+  color:aqua
+}
+
+.qwq .child {
+  color: blue
+}
