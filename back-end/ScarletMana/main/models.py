@@ -67,6 +67,9 @@ class Player(models.Model):
     # 剧情进度
     story_process = models.IntegerField(default=0)
 
+    # Temp Variables
+    temp_sold_minerals = models.IntegerField(default=0,null=True,blank=True)
+
     # 矮人及各职业矮人数量
     @property
     def dwarf(self):
@@ -108,7 +111,7 @@ class Player(models.Model):
             self.mana += self.mana_harvest_base + self.mana_harvest_multiple * self.soldier
         self.save()
     
-    # 收获金币 (要在收获矿物前被调用，因为商人卖矿物产出金币)
+    # 收获金币 (要在收获矿物前被调用，因为商人卖矿物产出金币，会更新缓存变量temp_sold_minerals)
     # 金币 += 基本产出 + 倍数 * 商人数
     # 金币 -= ceil(矮人数 * 工资倍数)
     def coin_harvest(self):
@@ -116,7 +119,8 @@ class Player(models.Model):
             self.coin_harvest_count -= 1
         else:
             self.coin_harvest_count = self.coin_harvest_interval
-            self.coin += self.coin_harvest_base + self.coin_harvest_multiple * min(self.mineral, self.merchant)
+            self.temp_sold_minerals = min(self.mineral, self.merchant)
+            self.coin += self.coin_harvest_base + self.coin_harvest_multiple * self.temp_sold_minerals
             self.coin -= math.floor(self.dwarf * self.employ_dwarf_salary)
             self.coin = max(self.coin, 0)
         self.save()
@@ -130,7 +134,7 @@ class Player(models.Model):
         else:
             self.mineral_harvest_count = self.mineral_harvest_interval
             self.mineral += self.mineral_harvest_base + self.mineral_harvest_multiple * self.miner
-            self.mineral -= self.merchant
+            self.mineral -= self.temp_sold_minerals
             self.mineral = max(self.mineral, 0)
         self.save()
     
