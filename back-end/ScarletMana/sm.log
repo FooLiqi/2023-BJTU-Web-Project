@@ -1,100 +1,13 @@
 nohup: ignoring input
-Internal Server Error: /api/llm/chat
-Traceback (most recent call last):
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
-    chunked=chunked,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 381, in _make_request
-    self._validate_conn(conn)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
-    conn.connect()
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connection.py", line 371, in connect
-    ssl_context=context,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/util/ssl_.py", line 386, in ssl_wrap_socket
-    return context.wrap_socket(sock, server_hostname=server_hostname)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/ssl.py", line 423, in wrap_socket
-    session=session
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/ssl.py", line 870, in _create
-    self.do_handshake()
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/ssl.py", line 1139, in do_handshake
-    self._sslobj.do_handshake()
-OSError: [Errno 0] Error
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/requests/adapters.py", line 497, in send
-    chunked=chunked,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
-    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/util/retry.py", line 410, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/packages/six.py", line 734, in reraise
-    raise value.with_traceback(tb)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
-    chunked=chunked,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 381, in _make_request
-    self._validate_conn(conn)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
-    conn.connect()
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/connection.py", line 371, in connect
-    ssl_context=context,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/urllib3/util/ssl_.py", line 386, in ssl_wrap_socket
-    return context.wrap_socket(sock, server_hostname=server_hostname)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/ssl.py", line 423, in wrap_socket
-    session=session
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/ssl.py", line 870, in _create
-    self.do_handshake()
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/ssl.py", line 1139, in do_handshake
-    self._sslobj.do_handshake()
-urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(0, 'Error'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/openai/api_requestor.py", line 530, in request_raw
-    proxies=_thread_context.session.proxies,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/requests/sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/requests/sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/requests/adapters.py", line 501, in send
-    raise ConnectionError(err, request=request)
-requests.exceptions.ConnectionError: ('Connection aborted.', OSError(0, 'Error'))
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/ubuntu/ScarletMana/2023-BJTU-Web-Project/back-end/ScarletMana/main/views.py", line 554, in llmChat
-    response = mcllm_backend.query(data["username"], data["target"], data["message"])
-  File "/home/ubuntu/ScarletMana/2023-BJTU-Web-Project/back-end/ScarletMana/main/minecraft_llm_support_backend/mcllm_backend.py", line 24, in query
-    response = self.chatgpt.query(self.histories[key], username, target, message)
-  File "/home/ubuntu/ScarletMana/2023-BJTU-Web-Project/back-end/ScarletMana/main/minecraft_llm_support_backend/chatgpt.py", line 21, in query
-    messages = Characters.getPrompt(target) + history
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/openai/api_resources/chat_completion.py", line 25, in create
-    return super().create(*args, **kwargs)
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 160, in create
-    request_timeout=request_timeout,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/openai/api_requestor.py", line 224, in request
-    request_timeout=request_timeout,
-  File "/home/ubuntu/anaconda3/envs/smbackend/lib/python3.7/site-packages/openai/api_requestor.py", line 538, in request_raw
-    ) from e
-openai.error.APIConnectionError: Error communicating with OpenAI: ('Connection aborted.', OSError(0, 'Error'))
-[15/Jun/2023 13:35:36] "POST /api/llm/chat HTTP/1.1" 500 294782
-[15/Jun/2023 13:36:14] "POST /api/message HTTP/1.1" 200 85
-[15/Jun/2023 13:36:14] "POST /api/resource HTTP/1.1" 200 130
-[15/Jun/2023 13:36:57] "POST /api/llm/chat HTTP/1.1" 200 90
-[15/Jun/2023 13:36:59] "POST /api/llm/chat HTTP/1.1" 200 263
-[15/Jun/2023 13:37:14] "POST /api/message HTTP/1.1" 200 85
-[15/Jun/2023 13:37:14] "POST /api/resource HTTP/1.1" 200 130
-[15/Jun/2023 13:38:14] "POST /api/message HTTP/1.1" 200 85
-[15/Jun/2023 13:38:14] "POST /api/resource HTTP/1.1" 200 130
-[15/Jun/2023 13:39:14] "POST /api/message HTTP/1.1" 200 85
-[15/Jun/2023 13:39:14] "POST /api/resource HTTP/1.1" 200 130
-[15/Jun/2023 13:39:41] "GET /admin/ HTTP/1.1" 200 9178
-[15/Jun/2023 13:39:52] "GET /admin/ HTTP/1.1" 200 9178
-[15/Jun/2023 13:40:14] "POST /api/message HTTP/1.1" 200 85
-[15/Jun/2023 13:40:14] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:34] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 14:04:34] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:34] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:35] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:36] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 14:04:36] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:37] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:38] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 14:04:38] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:39] "POST /api/resource HTTP/1.1" 200 130
+[15/Jun/2023 14:04:40] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 14:04:40] "POST /api/resource HTTP/1.1" 200 130
