@@ -55,7 +55,8 @@ const OperationComponent = () => {
       }
     }
     catch(e) {
-      console.log(e)
+      if(e.response.data.error_message) message.error(e.response.data.error_message)
+      else console.log(e)
     }
   }
   const handleDecMiner = async ()=> {
@@ -70,7 +71,8 @@ const OperationComponent = () => {
       }
     }
     catch(e) {
-      console.log(e)
+      if(e.response.data.error_message) message.error(e.response.data.error_message)
+      else console.log(e)
     }
   }
   const handleAddMerchant = async ()=> {
@@ -85,7 +87,8 @@ const OperationComponent = () => {
       }
     }
     catch(e) {
-      console.log(e)
+      if(e.response.data.error_message) message.error(e.response.data.error_message)
+      else console.log(e)
     }
   }
   const handleDecMerchant = async ()=> {
@@ -100,7 +103,8 @@ const OperationComponent = () => {
       }
     }
     catch(e) {
-      console.log(e)
+      if(e.response.data.error_message) message.error(e.response.data.error_message)
+      else console.log(e)
     }
   }
   const handleAddSoldier = async ()=> {
@@ -115,7 +119,8 @@ const OperationComponent = () => {
       }
     }
     catch(e) {
-      console.log(e)
+      if(e.response.data.error_message) message.error(e.response.data.error_message)
+      else console.log(e)
     }
   }
   const handleDecSoldier = async ()=> {
@@ -126,11 +131,13 @@ const OperationComponent = () => {
         MessageStore.addMessage(ret.data.message)
       }
       else {
+        
         message.error(ret.data.error_message);
       }
     }
     catch(e) {
-      console.log(e)
+      if(e.response.data.error_message) message.error(e.response.data.error_message)
+      else console.log(e)
     }
   }
 
@@ -179,7 +186,6 @@ const OperationComponent = () => {
           <div className='button-opration'>
             <div style = {{padding:'10px'}} >
             <div className='my-button multiline-text' >
-                
                 <span  className={spanClassName}>
                        &nbsp;&nbsp;矿&nbsp;工&nbsp;&nbsp;<br></br>
                 </span>

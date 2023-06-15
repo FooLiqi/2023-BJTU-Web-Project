@@ -13,6 +13,7 @@ class LoginStore {
 			username,
 			password,
 		})
+		console.log('hahahaha')
 		console.log(ret)
 		this.setToken(ret.data.token)
 			

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Handle } from 'react-flow-renderer';
-import {Button, Popover}from 'antd'
+import {Button, Popover, Tooltip}from 'antd'
 import {
   CheckOutlined
 }from '@ant-design/icons'
@@ -31,7 +31,7 @@ function SkillCard(props) {
   let content = <div>okok</div>
   if(SkillStore.skill_list.length >= props.id){
     content = <div >
-      <Popover  content={
+      <Popover title = {SkillStore.skill_list[props.id-1].name}  content={
         
         <div >
           <p className='default-h-font'>描述</p>

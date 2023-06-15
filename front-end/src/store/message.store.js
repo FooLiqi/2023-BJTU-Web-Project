@@ -1,11 +1,14 @@
 import {computed, makeAutoObservable} from 'mobx'
 import {http, setTokenFromLocalStorage, getTokenFromLocalStorage} from '../utils'
+import { removeTokenFromLocalStorage } from '../utils'
+
 class MessageStore {
   maxLength = 30
-
+	
   messages = []
   buffer_messages = []
 	input_text = []
+	
   constructor() {
 		this.messages = this.messages.slice(-this.maxLength)
 		makeAutoObservable(this,{
@@ -21,6 +24,7 @@ class MessageStore {
         return ret
       }
       const ret = getMessage()
+			console.log('checkret', ret)
       ret.then(res => {
 				var jsonArray = res.data.message;
 				console.log(jsonArray)
@@ -37,7 +41,7 @@ class MessageStore {
 				var firstElement = this.buffer_messages.shift();
 				this.addMessage(firstElement)
 			}
-    }, 1000);
+    }, 2000);
 
   }
   get reversedMessages() {
@@ -65,6 +69,16 @@ class MessageStore {
 		this.input_text = new_text
 	} 
 	getChatMessage = (message) => {
+		console.log(message)
+		if(message.includes('退出登录') || message.includes('退出') || message .includes('离开')||  message.includes ('离开矿场')) {
+			
+			this.addMessage('你离开了矿场...')
+			setTimeout(() => {
+				removeTokenFromLocalStorage()
+				window.location.reload()
+			}, 2500);
+			return;
+		}
 		this.addMessage('你祈祷: '+message)
 		function getMessage() {
 			const ret = http.post('api/llm/chat', {

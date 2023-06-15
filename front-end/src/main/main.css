@@ -108,6 +108,10 @@
 .selected-span {
   cursor: pointer;
 }
+
+.zhanwei {
+  width: 30vw;
+}
 .my-button {
   margin : 10px;
   font-size: 100%;

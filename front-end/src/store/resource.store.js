@@ -14,24 +14,28 @@ class ResourceStore {
   constructor() {
 		makeAutoObservable(this)
     setInterval(() => {
-      async function getResources() {
-        const ret = await http.post('/api/resource', {
-          token:getTokenFromLocalStorage()
+      if(getTokenFromLocalStorage()) {
+        async function getResources() {
+          const ret = await http.post('/api/resource', {
+            token:getTokenFromLocalStorage()
+            
+          })
+          return ret
+        }
+        const ret = getResources()
+        ret.then(res => {
+          this.setMana(res.data.mana)
+          this.setCoin(res.data.coin)
+          this.setDwarf(res.data.dwarf)
+          this.setMerchant(res.data.merchant)
+          this.setMiner(res.data.miner)
+          this.setMineral(res.data.mineral)
+          this.setSoldier(res.data.soldier)
+        }).catch(e => {
+          console.log(e)
         })
-        return ret
       }
-      const ret = getResources()
-      ret.then(res => {
-        this.setMana(res.data.mana)
-        this.setCoin(res.data.coin)
-        this.setDwarf(res.data.dwarf)
-        this.setMerchant(res.data.merchant)
-        this.setMiner(res.data.miner)
-        this.setMineral(res.data.mineral)
-        this.setSoldier(res.data.soldier)
-      }).catch(e => {
-        console.log(e)
-      })
+      
     }, 200);
   }
   setMana = (mana)=> {
