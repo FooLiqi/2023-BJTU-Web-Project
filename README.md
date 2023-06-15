@@ -137,6 +137,7 @@
     * UID：玩家的id
     * username：玩家的用户名
     * coin：玩家的金币数
+    * following：是否正在关注该玩家
 
 #### 2.6.2 魔法排行榜
 
@@ -149,6 +150,7 @@
     * UID：玩家的id
     * username：玩家的用户名
     * mana：玩家的法力值
+    * following：是否正在关注该玩家
 
 #### 2.6.3 矿物排行榜
 
@@ -161,6 +163,7 @@
     * UID：玩家的id
     * username：玩家的用户名
     * mineral：玩家的矿物数
+    * following：是否正在关注该玩家
 
 #### 2.6.4 关注玩家
 
@@ -171,8 +174,9 @@
 * 后端TO前端
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * message：具体信息。
-    * `successfully unsubscribe ID` 为成功取消关注
-    * `successfully subscribe ID` 为成功关注
+    * `successfully unsubscribe` 为成功取消关注
+    * `successfully subscribeD` 为成功关注
+    * `You always follow yourself. You are the only one who can own the power of ScarletMana!` 你永远关注着你自己，你可是要掌握绯红魔法的人！
 
 #### 2.6.5 关注玩家金币榜
 
@@ -185,6 +189,7 @@
     * UID：玩家的id
     * username：玩家的用户名
     * coin：玩家的金币数
+    * totalrank：玩家在总榜上的排名
 
 #### 2.6.6 关注玩家魔法榜
 
@@ -197,8 +202,9 @@
     * UID：玩家的id
     * username：玩家的用户名
     * mana：玩家的法力值
+    * totalrank：玩家在总榜上的排名
 
-#### 2.6.7 矿物排行榜
+#### 2.6.7 关注玩家矿物榜
 
 * `api/leaderboard/subscribe/mineral`
 * 前端TO后端
@@ -209,6 +215,7 @@
     * UID：玩家的id
     * username：玩家的用户名
     * mineral：玩家的矿物数
+    * totalrank：玩家在总榜上的排名
 
 ### 2.7 技能相关
 

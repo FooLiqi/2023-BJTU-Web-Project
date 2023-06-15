@@ -250,14 +250,16 @@ def leaderboardCoin(request):
     }
     
     rank = Player.objects.order_by('-coin')
-    folloing_players = player.following.all()
+    following_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock:  
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
+                "totalrank": i+1,
                 "username": rank[i].username,
                 "coin": rank[i].coin,
-                "following": "true" if rank[i] in folloing_players else "false",
+                "following": "true" if rank[i] in following_players 
+                                    or rank[i] == player else "false",
             }
     
     return Tools.toResponse(result, 200)
@@ -275,14 +277,16 @@ def leaderboardMana(request):
     }
     
     rank = Player.objects.order_by('-mana')
-    folloing_players = player.following.all()
+    following_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock:
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
+                "totalrank": i+1,
                 "username": rank[i].username,
                 "mana": rank[i].mana,
-                "following": "true" if rank[i] in folloing_players else "false",
+                "following": "true" if rank[i] in following_players 
+                                    or rank[i] == player else "false",
             }
     
     return Tools.toResponse(result, 200)
@@ -300,14 +304,16 @@ def leaderboardMineral(request):
     }
     
     rank = Player.objects.order_by('-mineral')
-    folloing_players = player.following.all()
+    following_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock: 
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
+                "totalrank": i+1,
                 "username": rank[i].username,
                 "mineral": rank[i].mineral,
-                "following": "true" if rank[i] in folloing_players else "false",
+                "following": "true" if rank[i] in following_players 
+                                    or rank[i] == player else "false",
             }
     
     return Tools.toResponse(result, 200)
@@ -375,6 +381,8 @@ def leaderboardSubscribeCoin(request):
                     "totalrank": i+1,
                     "username": rank[i].username,
                     "coin": rank[i].coin,
+                    "following": "true" if rank[i] in following_players
+                                        or rank[i] == player else "false",
                 }
     
     return Tools.toResponse(result, 200)
@@ -403,6 +411,8 @@ def leaderboardSubscribeMana(request):
                     "totalrank": i+1,
                     "username": rank[i].username,
                     "mana": rank[i].mana,
+                    "following": "true" if rank[i] in following_players
+                                        or rank[i] == player else "false",
                 }
     
     return Tools.toResponse(result, 200)
@@ -431,6 +441,8 @@ def leaderboardSubscribeMineral(request):
                     "totalrank": i+1,
                     "username": rank[i].username,
                     "mineral": rank[i].mineral,
+                    "following": "true" if rank[i] in following_players
+                                        or rank[i] == player else "false",
                 }
     
     return Tools.toResponse(result, 200)
