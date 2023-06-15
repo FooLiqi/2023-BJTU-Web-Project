@@ -1,1 +1,18 @@
 nohup: ignoring input
+[15/Jun/2023 04:47:05] "POST /api/leaderboard/mana HTTP/1.1" 200 394
+[15/Jun/2023 04:47:12] "POST /api/leaderboard/mana HTTP/1.1" 200 394
+[15/Jun/2023 04:47:14] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 04:47:14] "POST /api/resource HTTP/1.1" 200 125
+[15/Jun/2023 04:47:14] "POST /api/resource HTTP/1.1" 200 125
+[15/Jun/2023 04:47:14] "POST /api/resource HTTP/1.1" 200 125
+[15/Jun/2023 04:47:14] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 04:47:14] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 04:47:20] "POST /api/leaderboard/coin HTTP/1.1" 200 413
+[15/Jun/2023 04:47:43] "POST /api/leaderboard/coin HTTP/1.1" 200 413
+[15/Jun/2023 04:47:45] "POST /api/leaderboard/coin HTTP/1.1" 200 413
+[15/Jun/2023 04:48:14] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 04:48:14] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 04:48:14] "POST /api/message HTTP/1.1" 200 85
+[15/Jun/2023 04:48:14] "POST /api/resource HTTP/1.1" 200 125
+[15/Jun/2023 04:48:14] "POST /api/resource HTTP/1.1" 200 125
+[15/Jun/2023 04:48:14] "POST /api/resource HTTP/1.1" 200 125
