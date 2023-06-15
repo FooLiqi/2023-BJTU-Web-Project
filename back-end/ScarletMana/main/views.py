@@ -13,7 +13,10 @@ from .constants import *
 # Message：     欢迎信息
 # Leaderboard:  排行榜
 # Skill:        学习技能，查看所有技能，查看某个玩家学习技能的情况
+# LLM:          大语言模型支持
 
+from .minecraft_llm_support_backend.mcllm_backend import McllmBackend
+mcllm_backend = McllmBackend()
 
 # ===== Dwarf ===== #
 # 雇佣矮人
@@ -531,3 +534,34 @@ def queryLearnedSkills(request):
     
     return Tools.toResponse(result, 200)
 
+# ===== LLM ===== #
+def llmChat(request):
+    data = json.loads(request.body)
+
+    if "username" not in data or data["username"] is None:
+        return Tools.toErrorResponse("Not found username.")
+    if "target" not in data or data["target"] is None:
+        return Tools.toErrorResponse("Not found target.")
+    if "message" not in data or data["message"] is None:
+        return Tools.toErrorResponse("Not found message.")
+    
+    response = mcllm_backend.query(data["username"], data["target"], data["message"])
+
+    result = {
+        "state": "success",
+        "message": response,
+    }
+
+    print("Request: ", data, "\nResponse: ", result)
+
+    return Tools.toResponse(result, 200)
+
+def llmReset(request):
+    mcllm_backend.reset()
+
+    result = {
+        "state": "success",
+        "message": "reset success",
+    }
+
+    return Tools.toResponse(result, 200)

@@ -29,4 +29,8 @@ urlpatterns = [
     path('skill/query_all_skills', views.queryAllSkills),
     path('skill/learn', views.learnSkill),
     path('skill/query_learned_skills', views.queryLearnedSkills),
+
+    # ===== URL ===== #
+    path('llm/chat', views.llmChat),
+    path('llm/reset', views.llmReset),
 ]

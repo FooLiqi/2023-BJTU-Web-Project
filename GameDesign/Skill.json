@@ -14,7 +14,7 @@
     {
         "id": 2,
         "name": "魔法书的扉页",
-        "effect_describe": "你开始了解到了这本书蕴藏的强大力量，你的法力提升速度加快了",
+        "effect_describe": "你开始了解到了这本书蕴藏的强大力量，你的法力提升速度加快了。",
         "background_describe": "[写在魔法书扉页上的文字]",
         "precondition": 1,
         "mana_cost": 5,
@@ -23,10 +23,38 @@
     {
         "id": 3,
         "name": "照明术",
-        "effect_describe": "可以让你照亮周围的环境。你可以使用这个魔法提升自己的工作效率，使每秒钟获得更多金币。",
-        "background_describe": "你从镇上的市场中购入了一本新手魔法书，想从中开始学习魔法的基本知识",
+        "effect_describe": "照明术可以让你照亮周围的环境。你可以使用这个魔法提升自己的工作效率，使每秒钟获得更多金币。",
+        "background_describe": "你从史东派尔小镇的市场中购入了一本新手魔法书，从中开始学习魔法的基本知识。",
         "precondition": 1,
         "coin_cost": 10,
         "coin_harvest_base_increase": 1
+    },
+    {
+        "id": 4,
+        "name": "装备锻造",
+        "effect_describe": "现在开始，你可以使用金币和矿物为你的矮人矿工打造更好的工具，或者升级矮人战士的装备！",
+        "background_describe": "你发现了一位来自无冬城的矮人工匠。",
+        "precondition": 0,
+        "dwarf_limit": 3
+    },
+    {
+        "id": 5,
+        "name": "矿工提灯",
+        "effect_describe": "有了矿工提灯，现在你的矿工在漆黑的矿场中可以更好的工作了。",
+        "background_describe": "\"简单，但有效。\"",
+        "precondition": 4,
+        "coin_cost": 5,
+        "mineral_cost": 5,
+        "mineral_harvest_base_increase": 1
+    },
+    {
+        "id": 6,
+        "name": "粗制石镐",
+        "effect_describe": "有了粗制石镐，现在你的矿工能更快地采集矿物了。",
+        "background_describe": "石镐的手柄摸上去十分粗糙，估计都能划破那些精灵法师的手掌了（笑）",
+        "precondition": 4,
+        "coin_cost": 5,
+        "mineral_cost": 5,
+        "mineral_harvest_base_increase": 1
     }
 ]
