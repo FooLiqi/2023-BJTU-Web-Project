@@ -341,10 +341,13 @@ def leaderboardSubscribe(request):
         if follower != followed:  # 避免自己关注自己
             if follower.following.filter(ID=followed_id).exists():
                 follower.following.remove(followed)
-                result["message"] = f"successfully unsubscribe {followed_id}"
+                result["message"] = "successfully unsubscribe"
             else:
                 follower.following.add(followed)
-                result["message"] = f"successfully subscribe {followed_id}"
+                result["message"] = "successfully subscribe"
+        else:
+            result["message"] = "You always follow yourself. \
+                                 You are the only one who can own the power of ScarletMana!"
     
     return Tools.toResponse(result, 200)
     
