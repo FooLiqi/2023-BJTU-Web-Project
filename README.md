@@ -138,6 +138,7 @@
     * username：玩家的用户名
     * coin：玩家的金币数
     * following：是否正在关注该玩家
+    * totalrank：玩家在总榜上的排名
 
 #### 2.6.2 魔法排行榜
 
@@ -151,6 +152,7 @@
     * username：玩家的用户名
     * mana：玩家的法力值
     * following：是否正在关注该玩家
+    * totalrank：玩家在总榜上的排名
 
 #### 2.6.3 矿物排行榜
 
@@ -164,6 +166,7 @@
     * username：玩家的用户名
     * mineral：玩家的矿物数
     * following：是否正在关注该玩家
+    * totalrank：玩家在总榜上的排名
 
 #### 2.6.4 关注玩家
 
@@ -190,6 +193,7 @@
     * username：玩家的用户名
     * coin：玩家的金币数
     * totalrank：玩家在总榜上的排名
+    * following：是否正在关注该玩家
 
 #### 2.6.6 关注玩家魔法榜
 
@@ -203,6 +207,7 @@
     * username：玩家的用户名
     * mana：玩家的法力值
     * totalrank：玩家在总榜上的排名
+    * following：是否正在关注该玩家
 
 #### 2.6.7 关注玩家矿物榜
 
@@ -216,6 +221,7 @@
     * username：玩家的用户名
     * mineral：玩家的矿物数
     * totalrank：玩家在总榜上的排名
+    * following：是否正在关注该玩家
 
 ### 2.7 技能相关
 
