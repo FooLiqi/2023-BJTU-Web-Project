@@ -252,15 +252,12 @@ def leaderboardCoin(request):
     rank = Player.objects.order_by('-coin')
     folloing_players = player.following.all()
     for i in range(0, len(rank)):
-        with rank[i].lock:
-            if rank[i] in folloing_players:
-                result["following"] = "true"
-            else:
-                result["following"] = "false"   
+        with rank[i].lock:  
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
                 "coin": rank[i].coin,
+                "following": "true" if rank[i] in folloing_players else "false",
             }
     
     return Tools.toResponse(result, 200)
@@ -281,14 +278,11 @@ def leaderboardMana(request):
     folloing_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock:
-            if rank[i] in folloing_players:
-                result["following"] = "true"
-            else:
-                result["following"] = "false"  
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
                 "mana": rank[i].mana,
+                "following": "true" if rank[i] in folloing_players else "false",
             }
     
     return Tools.toResponse(result, 200)
@@ -308,15 +302,12 @@ def leaderboardMineral(request):
     rank = Player.objects.order_by('-mineral')
     folloing_players = player.following.all()
     for i in range(0, len(rank)):
-        with rank[i].lock:
-            if rank[i] in folloing_players:
-                result["following"] = "true"
-            else:
-                result["following"] = "false"  
+        with rank[i].lock: 
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
                 "mineral": rank[i].mineral,
+                "following": "true" if rank[i] in folloing_players else "false",
             }
     
     return Tools.toResponse(result, 200)
