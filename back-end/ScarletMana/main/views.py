@@ -227,11 +227,11 @@ def message(request):
         "state": "success",
     }
     with player.lock:
-        if player.story_process == 0:
-            player.story_process = 1
-            result["message"] = MESSAGE_ENTER_FIRST_TIME
+        if player.story_process <= 1:
+            player.story_process += 1
+            result["message"] = MESSAGE_ENTER_FIRST_TIME.copy()
         else:
-            result["message"] = MESSAGE_ENTER
+            result["message"] = MESSAGE_ENTER.copy()
         player.save()
     
     return Tools.toResponse(result, 200)
