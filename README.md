@@ -293,7 +293,7 @@
   * state：状态。若成功则为 `success`；若失败则为 `error`
   * error_message：错误原因
 
-#### 2.8.2 查看玩家所学习的所有技能ID
+#### 2.7.3 查看玩家所学习的所有技能ID
 
 * `api/skill/query_learned_skills`
 
@@ -318,3 +318,28 @@
       ```json
       [1, 2]
       ```
+
+### 2.8 LLM
+
+#### 2.8.1 Chat
+
+* `api/llm/chat`
+* 前端TO后端
+  * username：字符串，表示用户名称（目前没有作用）
+  * target：对话目标
+    * 比如设置为"Neko"的话，就会自动触发猫娘人设
+  * message：对话内容
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * error_message：错误原因
+  * message：LLM的返回信息
+
+#### 2.8.2 Reset
+
+* `api/llm/reset`
+* 前端TO后端
+  * 无
+* 后端TO前端
+  * state：状态。若成功则为 `success`；若失败则为 `error`
+  * error_message：错误原因
+
