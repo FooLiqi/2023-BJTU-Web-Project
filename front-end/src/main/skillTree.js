@@ -48,11 +48,11 @@ const SwitchFlow = observer (() =>{
   let content = null
   var skillNodes = skillNodes1
   var skillEdges = skillEdges1
-  if(SkillStore.now_page === 1) {
+  if(SkillStore.now_page === 2) {
     skillNodes = skillNodes1
     skillEdges = skillEdges1
   }
-  if(SkillStore.now_page === 2) {
+  if(SkillStore.now_page === 1) {
     skillNodes = skillNodes2
     skillEdges = skillEdges2
   }
@@ -108,7 +108,7 @@ function SkillTree () {
         onMouseLeave={handleMouseLeave}
         onClick={() => handleOnClick(1)}
         >
-          科技树
+          绯红魔法书
       </span>
       <span>&nbsp;&nbsp;&nbsp;</span>
       <span
@@ -116,7 +116,7 @@ function SkillTree () {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={() => handleOnClick(2)}>
-          绯红魔法书
+          科技树
       </span>
       <span>&nbsp;&nbsp;&nbsp;</span>
       <span
