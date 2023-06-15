@@ -20,7 +20,6 @@ urlpatterns = [
     path('leaderboard/coin', views.leaderboardCoin),
     path('leaderboard/mana', views.leaderboardMana),
     path('leaderboard/mineral', views.leaderboardMineral),
-    # path('leaderboard/subscribe', views.leaderboardSubscribe),
     path('leaderboard/subscribe', views.leaderboardSubscribe),
     path('leaderboard/subscribe/coin', views.leaderboardSubscribeCoin),
     path('leaderboard/subscribe/mana', views.leaderboardSubscribeMana),
@@ -30,4 +29,8 @@ urlpatterns = [
     path('skill/query_all_skills', views.queryAllSkills),
     path('skill/learn', views.learnSkill),
     path('skill/query_learned_skills', views.queryLearnedSkills),
+
+    # ===== URL ===== #
+    path('llm/chat', views.llmChat),
+    path('llm/reset', views.llmReset),
 ]
