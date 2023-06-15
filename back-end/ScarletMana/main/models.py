@@ -301,7 +301,7 @@ class Skill(models.Model):
 
     # ===== Methods =====
     def __str__(self):
-        return self.name
+        return str(self.ID) + "." + self.name
 
 class SkillLearn(models.Model):
     # ===== Constructor =====
