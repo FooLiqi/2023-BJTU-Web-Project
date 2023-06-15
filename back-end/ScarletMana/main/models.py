@@ -360,6 +360,8 @@ class SkillLearn(models.Model):
                 #     return "You don't have enough merchant dwarf."
                 # if self.player.soldier < self.skill.soldier_limit:
                 #     return "You don't have enough soldier dwarf."
+        
+        self.save()
 
         # 2. Apply Change State
         with self.skill.lock:
@@ -387,8 +389,5 @@ class SkillLearn(models.Model):
                 self.player.employ_dwarf_salary -= self.skill.employ_dwarf_salary_decrease
 
                 self.player.save()
-        
-        # 3. End
-        self.save()
 
         return "success"

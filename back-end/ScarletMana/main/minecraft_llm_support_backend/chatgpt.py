@@ -11,7 +11,7 @@ class ChatGPT():
 
     def __init__(self):
         if "OPENAI_API_KEY" not in os.environ:
-            print("FATAL ERROR: Not set OPENAI_API_KEY")
+            print(" ===== ===== FATAL ERROR: Not set OPENAI_API_KEY ===== ===== ")
         else:
             openai.api_key = os.environ["OPENAI_API_KEY"] # my account
             print("Load OpenAIKey: " + openai.api_key)
