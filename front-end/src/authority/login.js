@@ -49,8 +49,10 @@ function LoginForm  ()  {
           username: values.username,
           password: values.password
         })
+        
         message.success('注册成功')
         navigate('/', {replace:true})
+        window.location.reload()
       } catch(e) {
         message.error(e.response.data.error_message)
       }
