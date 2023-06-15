@@ -247,8 +247,13 @@ def leaderboardCoin(request):
     }
     
     rank = Player.objects.order_by('-coin')
+    folloing_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock:
+            if rank[i] in folloing_players:
+                result["following"] = "true"
+            else:
+                result["following"] = "false"   
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
@@ -270,8 +275,13 @@ def leaderboardMana(request):
     }
     
     rank = Player.objects.order_by('-mana')
+    folloing_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock:
+            if rank[i] in folloing_players:
+                result["following"] = "true"
+            else:
+                result["following"] = "false"  
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
@@ -293,8 +303,13 @@ def leaderboardMineral(request):
     }
     
     rank = Player.objects.order_by('-mineral')
+    folloing_players = player.following.all()
     for i in range(0, len(rank)):
         with rank[i].lock:
+            if rank[i] in folloing_players:
+                result["following"] = "true"
+            else:
+                result["following"] = "false"  
             result["rank" + str(i+1)] = {
                 "UID": rank[i].ID,
                 "username": rank[i].username,
@@ -360,6 +375,7 @@ def leaderboardSubscribeCoin(request):
                 cnt += 1
                 result["rank" + str(cnt)] = {
                     "UID": rank[i].ID,
+                    "totalrank": i+1,
                     "username": rank[i].username,
                     "coin": rank[i].coin,
                 }
@@ -387,6 +403,7 @@ def leaderboardSubscribeMana(request):
                 cnt += 1
                 result["rank" + str(cnt)] = {
                     "UID": rank[i].ID,
+                    "totalrank": i+1,
                     "username": rank[i].username,
                     "mana": rank[i].mana,
                 }
@@ -414,6 +431,7 @@ def leaderboardSubscribeMineral(request):
                 cnt += 1
                 result["rank" + str(cnt)] = {
                     "UID": rank[i].ID,
+                    "totalrank": i+1,
                     "username": rank[i].username,
                     "mineral": rank[i].mineral,
                 }
