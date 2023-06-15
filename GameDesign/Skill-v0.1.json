@@ -56,5 +56,41 @@
         "coin_cost": 5,
         "mineral_cost": 5,
         "mineral_harvest_base_increase": 1
+    },
+    {
+        "id": 7,
+        "name": "世界树之根",
+        "effect_describe": "仰望如巴别塔般的世界树，信仰从你心中滋生，你的法术增长更快了。",
+        "background_describe": "",
+        "precondition": 0,
+        "coin_cost": 10,
+        "mana_harvest_base_increase": 1
+    },
+    {
+        "id": 8,
+        "name": "太阳神的恩赐",
+        "effect_describe": "太阳神指引了你前进的方向，你的金币增长速度更快了。",
+        "background_describe": "",
+        "precondition": 7,
+        "mana_cost": 20,
+        "coin_harvest_base_increase": 1
+    },
+    {
+        "id": 9,
+        "name": "世界树之叶",
+        "effect_describe": "世界树的叶子上竟然落下了一颗颗晶莹剔透的宝石，你的矿物增长速度更快了。",
+        "background_describe": "",
+        "precondition": 7,
+        "mana_cost": 100,
+        "dwarf_limit": 10,
+        "mine_harvest_base_increase": 1
+    },
+    {
+        "id": 10,
+        "name": "世界树的真相？",
+        "effect_describe": "Hi fen niin ahrk hi fen niin, nuz hi fen niin ahrk hi fen niin.",
+        "background_describe": "",
+        "precondition": 8,
+        "dwarf_limit": 30
     }
 ]
