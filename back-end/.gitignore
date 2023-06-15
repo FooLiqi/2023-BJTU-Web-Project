@@ -5,4 +5,5 @@ ScarletMana/.vscode/
 ScarletMana/ScarletMana/__pycache__/
 ScarletMana/main/__pycache__/
 ScarletMana/main/migrations/__pycache__/
+ScarletMana/main/minecraft_llm_support_backend/__pycache__/
 /__pycache__/
