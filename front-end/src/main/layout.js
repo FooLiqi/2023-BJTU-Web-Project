@@ -69,11 +69,15 @@ function MainLayout  ()  {
 				</div>
 			</div>
 			<div style={{ width: '50vw', height: '70vh' }}>
-				<Carousel dotPosition='top' effect="fade" >
+				<div>
 					<div>
 						<SkillTree></SkillTree>
 					</div>
-				</Carousel>
+					<div className="button-container">
+						<div className='zhanwei'></div>
+        		{/* <button className="button">按钮</button> */}
+     		 	</div>
+				</div>
 			</div>
 			
 		</div>

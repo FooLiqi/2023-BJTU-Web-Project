@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styles from './login.module.css';
 import  './login.css';
 import {message, Form, Input, Button, Card } from 'antd';
@@ -10,6 +10,17 @@ import cx from 'classnames';
 function LoginForm  ()  {
   const {loginStore} = useStore()
   const navigate = useNavigate()
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsSelected(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsSelected(false);
+  };
+  const spanClassName = `${'default-font'} ${isSelected ? 'selected-span' : ''}`;
+
   var button_state = ''
   async function handleLoginFinish(values) {
     console.log(button_state)
@@ -22,6 +33,7 @@ function LoginForm  ()  {
           password: values.password
         })
         navigate('/', {replace:true})
+        window.location.reload()
         message.success('登录成功')
       } catch(e) {
         console.log(e)
@@ -39,7 +51,6 @@ function LoginForm  ()  {
         })
         message.success('注册成功')
         navigate('/', {replace:true})
-        
       } catch(e) {
         message.error(e.response.data.error_message)
       }
@@ -67,7 +78,7 @@ function LoginForm  ()  {
                 rules={[{ required: true, message: '请输入用户名' }]}
                 
               >
-                <Input  placeholder="登录用户名" className='lovekdl' /> 
+                <Input  placeholder="用户名" className='lovekdl' /> 
               </Form.Item>
 
               <Form.Item
@@ -78,10 +89,11 @@ function LoginForm  ()  {
               </Form.Item>
 
               <Form.Item className='login-form-inner'>
-                <Button type="primary" htmlType="submit"  shape = 'default' onClick={clickLoginHandler}  >
+              
+                <Button htmlType="submit"  shape = 'default' onClick={clickLoginHandler}  >
                   登录
                 </Button>
-                <Button type="primary" htmlType="submit" style={{ marginLeft: '50px' }}  onClick={clickRegisterHandler} >
+                <Button  htmlType="submit" style={{ marginLeft: '50px' }}  onClick={clickRegisterHandler} >
                   注册
                 </Button>
               </Form.Item>
