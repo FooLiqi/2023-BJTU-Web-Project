@@ -1,11 +1,16 @@
 from typing import Any, Optional
 from django.apps import AppConfig
 
+import os
 import threading
 import signal
 import sys
 
 from .game_loop import GameLoopThread
+
+# For OpenAI/ChatGPT
+# os.environ['http_proxy'] = "http://127.0.0.1:20171"
+# os.environ['https_proxy'] = "http://127.0.0.1:20171"
 
 class MainConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
