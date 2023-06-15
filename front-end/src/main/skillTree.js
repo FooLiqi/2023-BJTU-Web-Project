@@ -1,5 +1,5 @@
 import React,{ useCallback,useState,useEffect ,useRef} from 'react';
-import { skillNodes1 , skillEdges1, skillNodes2,skillEdges2 } from './skillElement.js';
+import { skillNodes1 , skillEdges1, skillNodes2,skillEdges2, skillNodes3, skillEdges3 } from './skillElement.js';
 import { Carousel, Radio } from 'antd';
 import { observer } from 'mobx-react-lite';
 import  { FitViewParams } from 'react-flow-renderer';
@@ -55,6 +55,10 @@ const SwitchFlow = observer (() =>{
   if(SkillStore.now_page === 2) {
     skillNodes = skillNodes2
     skillEdges = skillEdges2
+  }
+  if(SkillStore.now_page === 3) {
+    skillNodes = skillNodes3
+    skillEdges = skillEdges3
   }
   content = 
       <ReactFlow 

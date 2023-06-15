@@ -6,7 +6,7 @@ class SkillStore {
   
   skill_list = []
   learned_skills = []
-  now_page = 1
+  now_page = 2
 
   flow = null
   constructor() {
