@@ -8,7 +8,7 @@ from .chatgpt import ChatGPT
 # Flask与LLM的中间层
 class McllmBackend():
     HISTORY_LENGTH_LIMIT = 20
-    openai_api_key = "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"
+    openai_api_key = "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"
     def __init__(self):
         self.histories = {}
         self.chatgpt = ChatGPT(McllmBackend.openai_api_key)
