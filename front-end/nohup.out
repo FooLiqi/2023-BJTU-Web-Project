@@ -1,0 +1,29 @@
+yarn run v1.22.19
+$ react-scripts start
+(node:538619) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:538619) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view scarletmana_front in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://10.0.8.16:3000
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+[eslint] EACCES: permission denied, open '/home/ubuntu/ScarletMana/2023-BJTU-Web-Project/front-end/node_modules/.cache/.eslintcache'
+ERROR in [eslint] EACCES: permission denied, open '/home/ubuntu/ScarletMana/2023-BJTU-Web-Project/front-end/node_modules/.cache/.eslintcache'
+
+webpack compiled with 1 error
+yarn run v1.22.19
+$ react-scripts start
+Something is already running on port 3000.
+Done in 2.06s.

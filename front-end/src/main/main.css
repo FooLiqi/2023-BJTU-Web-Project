@@ -49,14 +49,12 @@
 }
 
 .fade-in {
-  font-size: 150%;
+  font-size: 130%;
   font-family: 'SmileySans';
   letter-spacing: 1px;
   color:black;
   padding-top: 10px;
   opacity: 0;
-  
-  
 }
 
 .fade-in.active {

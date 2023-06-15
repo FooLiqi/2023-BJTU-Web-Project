@@ -24,8 +24,9 @@ class MessageStore {
         return ret
       }
       const ret = getMessage()
-			console.log('checkret', ret)
+			
       ret.then(res => {
+				console.log('checkret', res)
 				var jsonArray = res.data.message;
 				console.log(jsonArray)
 				for(var i = 0; i < jsonArray.length; ++i) {

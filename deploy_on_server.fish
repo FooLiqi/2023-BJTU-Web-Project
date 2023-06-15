@@ -9,6 +9,6 @@ cd ..
 cd ..
 
 # Frontend
-# cd front-end
-# sudo yarn start &
-# cd ..
+cd front-end
+nohup sudo yarn start &
+cd ..
