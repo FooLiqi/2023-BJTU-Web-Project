@@ -15,7 +15,7 @@
         "id": 2,
         "name": "魔法书的扉页",
         "effect_describe": "你开始了解到了这本书蕴藏的强大力量，你的法力提升速度加快了。",
-        "background_describe": "[写在魔法书扉页上的文字]",
+        "background_describe": "Zahkrii kulaan do faal Dovah, nuz hi los wahlaan ahrk zey.",
         "precondition": 1,
         "mana_cost": 5,
         "mana_harvest_base_increase": 1
