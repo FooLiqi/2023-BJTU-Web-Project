@@ -21,6 +21,10 @@ const OperationComponent = () => {
     width: `${(''+ResourceStore.soldier).length * 8 + 60}px`, // 根据文本长度计算宽度，每个字符占用 8px 的宽度
   };
   
+  const handleOut = () => {
+    MessageStore.addMessage('你带领矮人出征了，但是什么也没有收货。')
+  }
+
   const handleHireClick = async () => {
     try {
         const ret = await http.post('/api/employ', {
@@ -169,6 +173,7 @@ const OperationComponent = () => {
               <span  className={spanClassName}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onClick={handleOut}
                     >
                       出&nbsp;征
               </span>
