@@ -1,0 +1,70 @@
+Date : 2023-06-16 01:16:56
+Directory : d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end
+Total : 32 files,  14490 codes, 58 comments, 266 blanks, all 14814 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          3 |     12,801 |          0 |          3 |     12,804 |
+| JavaScript |         22 |      1,239 |         30 |        170 |      1,439 |
+| CSS        |          5 |        392 |          5 |         59 |        456 |
+| Markdown   |          1 |         38 |          0 |         33 |         71 |
+| HTML       |          1 |         20 |         23 |          1 |         44 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                            | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                               |         32 |     14,490 |         58 |        266 |     14,814 |
+| . (Files)                                                                                       |          3 |     12,814 |          0 |         35 |     12,849 |
+| public                                                                                          |          2 |         45 |         23 |          2 |         70 |
+| src                                                                                             |         27 |      1,631 |         35 |        229 |      1,895 |
+| src (Files)                                                                                     |          4 |         88 |          3 |         19 |        110 |
+| src\authority                                                                                   |          4 |        240 |          4 |         41 |        285 |
+| src\components                                                                                  |          1 |         11 |          0 |          1 |         12 |
+| src\main                                                                                        |          8 |        774 |          9 |         99 |        882 |
+| src\rank                                                                                        |          1 |         46 |          0 |         13 |         59 |
+| src\store                                                                                       |          6 |        428 |         12 |         45 |        485 |
+| src\utils                                                                                       |          3 |         44 |          7 |         11 |         62 |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                        | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\README.md                       | Markdown   |         38 |          0 |         33 |         71 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\package-lock.json               | JSON       |     12,724 |          0 |          1 |     12,725 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\package.json                    | JSON       |         52 |          0 |          1 |         53 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\public\index.html               | HTML       |         20 |         23 |          1 |         44 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\public\manifest.json            | JSON       |         25 |          0 |          1 |         26 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\App.css                     | CSS        |         50 |          3 |          9 |         62 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\App.js                      | JavaScript |         18 |          0 |          5 |         23 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\authority\index.js          | JavaScript |          2 |          0 |          1 |          3 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\authority\login.css         | CSS        |         76 |          1 |         11 |         88 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\authority\login.js          | JavaScript |         81 |          2 |         15 |         98 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\authority\login.module.css  | CSS        |         81 |          1 |         14 |         96 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\components\authComponent.js | JavaScript |         11 |          0 |          1 |         12 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\index.css                   | CSS        |         12 |          0 |          2 |         14 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\index.js                    | JavaScript |          8 |          0 |          3 |         11 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\layout.js              | JavaScript |         77 |          0 |          9 |         86 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\main.css               | CSS        |        173 |          0 |         23 |        196 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\messageBox.js          | JavaScript |         25 |          0 |          4 |         29 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\operationComponent.js  | JavaScript |        255 |          9 |         19 |        283 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\resourceComponent.js   | JavaScript |         44 |          0 |          9 |         53 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\skillCard.js           | JavaScript |         61 |          0 |         10 |         71 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\skillElement.js        | JavaScript |         24 |          0 |          7 |         31 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\main\skillTree.js           | JavaScript |        115 |          0 |         18 |        133 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\rank\rank.modal.js          | JavaScript |         46 |          0 |         13 |         59 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\store\index.js              | JavaScript |         19 |          0 |          3 |         22 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\store\login.strore.js       | JavaScript |         29 |          3 |          2 |         34 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\store\message.store.js      | JavaScript |         84 |          0 |          9 |         93 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\store\rank.store.js         | JavaScript |        127 |          5 |         16 |        148 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\store\resource.store.js     | JavaScript |         57 |          1 |          3 |         61 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\store\skill.store.js        | JavaScript |        112 |          3 |         12 |        127 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\utils\http.js               | JavaScript |         25 |          5 |          4 |         34 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\utils\index.js              | JavaScript |          4 |          1 |          2 |          7 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\front-end\src\utils\token.js              | JavaScript |         15 |          1 |          5 |         21 |
+| Total                                                                                           |            |     14,490 |         58 |        266 |     14,814 |
++-------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

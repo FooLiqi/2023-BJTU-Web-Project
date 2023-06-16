@@ -1,0 +1,77 @@
+Date : 2023-06-16 00:24:58
+Directory : d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project
+Total : 34 files,  1792 codes, 323 comments, 553 blanks, all 2668 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Python           |         21 |      1,111 |        323 |        352 |      1,786 |
+| Markdown         |          5 |        522 |          0 |        196 |        718 |
+| JSON             |          3 |        128 |          0 |          1 |        129 |
+| Log              |          1 |         13 |          0 |          1 |         14 |
+| Shell Script     |          1 |          8 |          0 |          1 |          9 |
+| pip requirements |          2 |          8 |          0 |          2 |         10 |
+| PowerShell       |          1 |          2 |          0 |          0 |          2 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                           | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                              |         34 |      1,792 |        323 |        553 |      2,668 |
+| . (Files)                                                                                                                      |          2 |        285 |          0 |         88 |        373 |
+| GameDesign                                                                                                                     |          5 |        342 |          0 |         97 |        439 |
+| GameDesign (Files)                                                                                                             |          2 |        120 |          0 |          0 |        120 |
+| GameDesign\GameDesign                                                                                                          |          2 |        119 |          0 |         56 |        175 |
+| GameDesign\NumericalDesign                                                                                                     |          1 |        103 |          0 |         41 |        144 |
+| back-end                                                                                                                       |         27 |      1,165 |        323 |        368 |      1,856 |
+| back-end (Files)                                                                                                               |          2 |         29 |          0 |         14 |         43 |
+| back-end\ScarletMana                                                                                                           |         25 |      1,136 |        323 |        354 |      1,813 |
+| back-end\ScarletMana (Files)                                                                                                   |          3 |         36 |          4 |          8 |         48 |
+| back-end\ScarletMana\ScarletMana                                                                                               |          5 |         97 |         88 |         53 |        238 |
+| back-end\ScarletMana\main                                                                                                      |         17 |      1,003 |        231 |        293 |      1,527 |
+| back-end\ScarletMana\main (Files)                                                                                              |         11 |        818 |        146 |        234 |      1,198 |
+| back-end\ScarletMana\main\minecraft_llm_support_backend                                                                        |          6 |        185 |         85 |         59 |        329 |
++--------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                                                       | language         | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\GameDesign\GameDesign\GameDesign-PlayerPerspective.md                    | Markdown         |         67 |          0 |         43 |        110 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\GameDesign\GameDesign\GameDesign.md                                      | Markdown         |         52 |          0 |         13 |         65 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\GameDesign\NumericalDesign\NumericalDesign.md                            | Markdown         |        103 |          0 |         41 |        144 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\GameDesign\Skill-v0.1.json                                               | JSON             |         60 |          0 |          0 |         60 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\GameDesign\Skill.json                                                    | JSON             |         60 |          0 |          0 |         60 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\README.md                                                                | Markdown         |        277 |          0 |         87 |        364 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\README.md                                                       | Markdown         |         23 |          0 |         12 |         35 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\ScarletMana\__init__.py                             | Python           |          2 |          0 |          3 |          5 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\ScarletMana\asgi.py                                 | Python           |          4 |          8 |          5 |         17 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\ScarletMana\settings.py                             | Python           |         81 |         48 |         36 |        165 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\ScarletMana\urls.py                                 | Python           |          6 |         24 |          4 |         34 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\ScarletMana\wsgi.py                                 | Python           |          4 |          8 |          5 |         17 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\__init__.py                                    | Python           |          0 |          0 |          1 |          1 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\admin.py                                       | Python           |         12 |          2 |          3 |         17 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\apps.py                                        | Python           |         17 |          6 |          7 |         30 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\constants.py                                   | Python           |         30 |          6 |          9 |         45 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\game_loop.py                                   | Python           |         20 |          1 |          8 |         29 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\minecraft_llm_support_backend\app.py           | Python           |         30 |          3 |         13 |         46 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\minecraft_llm_support_backend\characters.py    | Python           |        107 |         69 |         27 |        203 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\minecraft_llm_support_backend\chatgpt.py       | Python           |         26 |          3 |         10 |         39 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\minecraft_llm_support_backend\mcllm_backend.py | Python           |         18 |         10 |          9 |         37 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\minecraft_llm_support_backend\requirements.txt | pip requirements |          2 |          0 |          0 |          2 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\minecraft_llm_support_backend\start.ps1        | PowerShell       |          2 |          0 |          0 |          2 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\models.py                                      | Python           |        240 |         75 |         75 |        390 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\resources.py                                   | Python           |          6 |          1 |          3 |         10 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\tests.py                                       | Python           |          1 |          1 |          2 |          4 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\tools.py                                       | Python           |         41 |          2 |         19 |         62 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\urls.py                                        | Python           |         27 |          3 |          7 |         37 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\main\views.py                                       | Python           |        424 |         49 |        100 |        573 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\manage.py                                           | Python           |         15 |          4 |          6 |         25 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\pyrightconfig.json                                  | JSON             |          8 |          0 |          1 |          9 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\ScarletMana\sm.log                                              | Log              |         13 |          0 |          1 |         14 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\back-end\requirements.txt                                                | pip requirements |          6 |          0 |          2 |          8 |
+| d:\LiqisPode\school\ScarletMana\2023-BJTU-Web-Project\deploy_on_server.fish                                                    | Shell Script     |          8 |          0 |          1 |          9 |
+| Total                                                                                                                          |                  |      1,792 |        323 |        553 |      2,668 |
++--------------------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
